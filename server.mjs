@@ -54,6 +54,20 @@ export function validateContent(content) {
     if (typeof value !== 'string' || value.length > max || (!empty && !value.trim())) fail(422, `${location} : texte ${empty ? '' : 'non vide '}de ${max} caractères maximum attendu.`);
     if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(value)) fail(422, `${location} : caractères de contrôle interdits.`);
   };
+  const httpUrl = (value, location) => {
+    string(value, location, 2048, { empty: false });
+    let parsed; try { parsed = new URL(value); } catch { fail(422, `${location} : URL HTTP(S) absolue attendue.`); }
+    if (!['http:', 'https:'].includes(parsed.protocol) || parsed.username || parsed.password) fail(422, `${location} : URL HTTP(S) sans identifiants attendue.`);
+  };
+  const sources = (value, location) => {
+    if (value === undefined) return;
+    if (!Array.isArray(value) || value.length > 50) fail(422, `${location} : liste de 50 sources maximum attendue.`);
+    value.forEach((source, index) => { object(source, `${location}[${index}]`); string(source.title, `${location}[${index}].title`, 240, { empty: false }); httpUrl(source.url, `${location}[${index}].url`); });
+  };
+  const dateOnly = (value, location) => {
+    if (value === undefined) return;
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(Date.parse(`${value}T00:00:00Z`)) || new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) !== value) fail(422, `${location} : date réelle au format AAAA-MM-JJ attendue, ou retirez le champ.`);
+  };
   object(content, 'Contenu');
   if (Buffer.byteLength(serialise(content)) > MAX_BODY) fail(422, 'Le contenu dépasse 1 Mo.');
   for (const section of ['business', 'home', 'about', 'demo']) object(content[section], section);
@@ -61,6 +75,20 @@ export function validateContent(content) {
   for (const key of ['phone', 'address', 'city', 'postalCode', 'appointmentNote']) string(content.business[key], `business.${key}`, 1000, { empty: key === 'appointmentNote' });
   for (const key of ['eyebrow', 'title', 'description']) string(content.home[key], `home.${key}`, key === 'description' ? 4000 : 240, { empty: key !== 'title' });
   string(content.about.intro, 'about.intro', 15000);
+  if (content.business.sameAs !== undefined) {
+    if (!Array.isArray(content.business.sameAs) || content.business.sameAs.length > 20) fail(422, 'business.sameAs : liste de 20 liens HTTP(S) maximum attendue.');
+    content.business.sameAs.forEach((url, index) => httpUrl(url, `business.sameAs[${index}]`));
+  }
+  if (content.media !== undefined) {
+    object(content.media, 'media');
+    if (content.media.photosAuthorized !== undefined && typeof content.media.photosAuthorized !== 'boolean') fail(422, 'media.photosAuthorized : booléen attendu.');
+    if (content.media.shareImage !== undefined) {
+      const image = content.media.shareImage; object(image, 'media.shareImage');
+      if (typeof image.path !== 'string' || !/^assets\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9][A-Za-z0-9._-]*\.(?:jpe?g|png|webp)$/i.test(image.path) || image.path.includes('..')) fail(422, 'media.shareImage.path : image locale JPG, PNG ou WebP dans assets/, sans traversée de répertoire.');
+      for (const dimension of ['width', 'height']) if (!Number.isInteger(image[dimension]) || image[dimension] < 1 || image[dimension] > 10000) fail(422, `media.shareImage.${dimension} : entier entre 1 et 10000 attendu.`);
+      string(image.alt, 'media.shareImage.alt', 500, { empty: false });
+    }
+  }
   const configs = { services: [['slug', 100], ['title', 240], ['summary', 3000], ['body', 20000]], faqs: [['question', 500], ['answer', 6000]], posts: [['slug', 100], ['title', 240], ['excerpt', 3000], ['body', 30000]], pages: [['slug', 100], ['title', 240], ['description', 3000], ['body', 30000]] };
   for (const [section, fields] of Object.entries(configs)) {
     if (section === 'pages' && content.pages === undefined) continue;
@@ -77,6 +105,19 @@ export function validateContent(content) {
       }
     }
   }
+  const serviceSlugs = new Set(content.services.map(service => service.slug));
+  content.services.forEach((service, index) => sources(service.sources, `services[${index}].sources`));
+  content.posts.forEach((post, index) => {
+    const prefix = `posts[${index}]`;
+    string(post.category, `${prefix}.category`, 160, { optional: true, empty: false });
+    dateOnly(post.datePublished, `${prefix}.datePublished`); dateOnly(post.dateModified, `${prefix}.dateModified`);
+    if (post.datePublished && post.dateModified && post.dateModified < post.datePublished) fail(422, `${prefix}.dateModified : la mise à jour ne peut pas précéder la publication.`);
+    sources(post.sources, `${prefix}.sources`);
+    if (post.relatedServices !== undefined) {
+      if (!Array.isArray(post.relatedServices) || post.relatedServices.length > content.services.length) fail(422, `${prefix}.relatedServices : liste de slugs de soins existants attendue.`);
+      if (post.relatedServices.some(slug => typeof slug !== 'string' || !serviceSlugs.has(slug)) || new Set(post.relatedServices).size !== post.relatedServices.length) fail(422, `${prefix}.relatedServices : chaque slug doit désigner un soin existant, sans doublon.`);
+    }
+  });
   const date = content.demo.removalDate;
   if (date !== null && date !== undefined && (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(`${date}T00:00:00Z`)) || new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) !== date)) fail(422, 'La date de retrait doit être une date réelle au format AAAA-MM-JJ, ou null.');
   return content;

@@ -104,6 +104,49 @@ test('optional legal pages accept only the three unique supported routes and tex
   const tooMany = structuredClone(content); tooMany.pages.push({ ...tooMany.pages[0] }); assert.throws(() => validateContent(tooMany), /liste de 3/);
 });
 
+test('article metadata, source references and approved media survive saving without invented dates', async t => {
+  const f = await fixture(t); await f.login(); const original = await (await f.request('/api/content')).json();
+  const content = structuredClone(original.content);
+  Object.assign(content.posts[0], { category: 'Première visite', datePublished: '2026-10-11', dateModified: '2026-10-12', sources: [{ title: 'Présentation du cabinet', url: 'https://example.org/cabinet' }], relatedServices: ['soin-visage'], editorialNote: 'Champ complémentaire à conserver' });
+  content.services[0].sources = [{ title: 'Source du soin', url: 'http://example.org/soin' }];
+  content.business.sameAs = ['https://example.org/profil'];
+  content.media = { photosAuthorized: true, shareImage: { path: 'assets/portrait.jpg', width: 1080, height: 1080, alt: 'Portrait de Nadège Becquet' } };
+  const response = await f.request('/api/content', { method: 'PUT', body: { content, revision: original.revision } }); assert.equal(response.status, 200);
+  const saved = await response.json(); assert.deepEqual(saved.content, content);
+  delete saved.content.posts[0].datePublished; delete saved.content.posts[0].dateModified;
+  const undatedResponse = await f.request('/api/content', { method: 'PUT', body: { content: saved.content, revision: saved.revision } });
+  assert.equal(undatedResponse.status, 200); const undated = await undatedResponse.json();
+  assert.equal(undated.content.posts[0].datePublished, undefined); assert.equal(undated.content.posts[0].dateModified, undefined);
+});
+
+test('malformed editorial fields, unknown related services and unsafe media links return 422 before saving', async t => {
+  const f = await fixture(t); await f.login(); const original = await (await f.request('/api/content')).json();
+  const cases = [
+    content => { content.posts[0].category = {}; },
+    content => { content.posts[0].datePublished = '2026-02-30'; },
+    content => { content.posts[0].datePublished = '2026-10-11T10:00:00Z'; },
+    content => { content.posts[0].datePublished = '2026-10-12'; content.posts[0].dateModified = '2026-10-11'; },
+    content => { content.posts[0].sources = 'x'; },
+    content => { content.posts[0].sources = [{ title: 'Source', url: 'javascript:alert(1)' }]; },
+    content => { content.posts[0].sources = [{ title: '', url: 'https://example.org/' }]; },
+    content => { content.services[0].sources = [{ title: 'Source', url: 'https://user:secret@example.org/' }]; },
+    content => { content.posts[0].relatedServices = {}; },
+    content => { content.posts[0].relatedServices = ['soin-inexistant']; },
+    content => { content.posts[0].relatedServices = ['soin-visage', 'soin-visage']; },
+    content => { content.business.sameAs = 'https://example.org'; },
+    content => { content.business.sameAs = ['data:text/plain,unsafe']; },
+    content => { content.media = { photosAuthorized: 'true' }; },
+    content => { content.media = { shareImage: { path: 'assets/../secret.jpg', width: 1080, height: 1080, alt: 'Portrait' } }; },
+    content => { content.media = { shareImage: { path: 'assets/photo.jpg', width: -1, height: 1080, alt: 'Portrait' } }; },
+    content => { content.media = { shareImage: { path: 'assets/photo.jpg', width: 1080, height: 1080, alt: '' } }; }
+  ];
+  for (const [index, mutate] of cases.entries()) {
+    const content = structuredClone(original.content); mutate(content);
+    const response = await f.request('/api/content', { method: 'PUT', body: { content, revision: original.revision } }); assert.equal(response.status, 422, `case ${index + 1}`);
+  }
+  assert.equal((await (await f.request('/api/content')).json()).revision, original.revision);
+});
+
 test('editorial approval is authenticated, versioned and invalidated by changed content', async t => {
   const f = await fixture(t);
   assert.equal((await f.request('/api/approval')).status, 401);

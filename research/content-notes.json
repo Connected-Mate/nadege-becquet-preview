@@ -13,6 +13,10 @@
     {
       "fact": "Retrait de la démo demandé dans un mois : date retenue 11 novembre 2026 à partir du 11 octobre 2026.",
       "source": "Instruction utilisateur dans la conversation"
+    },
+    {
+      "fact": "Les droits d’utilisation des photographies sont confirmés explicitement pour ce projet le 11 octobre 2026. Aucune nouvelle demande de confirmation n’est nécessaire.",
+      "source": "Instruction utilisateur dans la conversation du 11 octobre 2026"
     }
   ],
   "uncertainOrMissing": [
@@ -20,11 +24,10 @@
     "Les durées, tarifs, moyens de paiement, modalités d’annulation et possibilités de réservation en ligne ne sont pas confirmés.",
     "Les protocoles détaillés, produits utilisés, effets attendus et éventuelles contre-indications doivent être précisés par Nadège ; aucun protocole ni bénéfice médical n’est inventé.",
     "Le statut juridique, le SIREN/SIRET, l’adresse de contact électronique, le responsable de publication, la médiation de la consommation et les mentions légales complètes restent à confirmer.",
-    "L’entrée, l’étage, l’accessibilité, le stationnement et les arrêts de transport à proximité ne sont pas vérifiés.",
+    "L’entrée, l’étage, l’accessibilité, le stationnement et l’arrêt de transport le plus proche ne sont pas vérifiés. La ligne R et la liaison générale du bus 3401 vers le centre-ville sont documentées par Fontainebleau Tourisme.",
     "La zone de clientèle au-delà de Fontainebleau et le profil de clientèle prioritaire ne sont pas précisés par l’utilisateur.",
     "La capture Instagram mentionne une formation Méthode LB Facialiste et un soin L’Odaïtès ; ces éléments ne sont pas ajoutés à l’offre faute de vérification indépendante de leur actualité.",
     "Aucun autre membre d’équipe n’est identifié dans les deux sources vérifiées ; la présentation est centrée sur Nadège.",
-    "Le droit de réutilisation des portraits, photographies et logos issus du site ou des réseaux sociaux n’est pas confirmé par la réponse utilisateur.",
     "Aucune preuve d’autorisation de publication d’avis clients ou de photographies avant/après n’est fournie ; aucun avis, note agrégée ni résultat n’est créé."
   ],
   "differencesToResolve": [
@@ -37,6 +40,36 @@
     "Les articles sont des aides pratiques originales à la prise de rendez-vous, sans invention de protocole.",
     "Les informations inconnues sont documentées ici et ne deviennent pas des promesses dans les contenus clients.",
     "Les pages restent sans tarifs, durées ni horaires supposés.",
-    "Les intitulés de qualifications sont strictement limités aux mentions vérifiées dans l’annuaire de l’école."
-  ]
+    "Les intitulés de qualifications sont strictement limités aux mentions vérifiées dans l’annuaire de l’école.",
+    "Six articles originaux, sans signature attribuée à Nadège, avec catégorie, dates éditoriales et sources primaires par article. Les dates concernent la rédaction de la démo."
+  ],
+  "technicalSources": [
+    {
+      "title": "Formation Authentique Kobido, École du Kobido",
+      "url": "https://www.ecoledukobido.com/formations/authentiquekobido"
+    },
+    {
+      "title": "Programme Devenir Facialiste, Académie des Facialistes",
+      "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+    },
+    {
+      "title": "Venir et se déplacer, Fontainebleau Tourisme",
+      "url": "https://www.fontainebleau-tourisme.com/fr/preparer-son-sejour/infos-pratiques/venir-au-pays-de-fontainebleau-train-voiture-velo/"
+    },
+    {
+      "title": "Stationnement en voirie à Fontainebleau, Interparking",
+      "url": "https://www.interparking.fr/fr/voirie-fontainebleau/"
+    },
+    {
+      "title": "Parcours Facialiste, École du Kobido",
+      "url": "https://www.ecoledukobido.com/formations/facialiste"
+    }
+  ],
+  "mediaAuthorization": {
+    "photosAuthorized": true,
+    "confirmedAt": "2026-10-11",
+    "scope": "Photographies utilisées pour ce projet",
+    "source": "Confirmation explicite de l’utilisateur"
+  },
+  "sourceUseNote": "Descriptions techniques brèves et attribuées aux organismes ; les articles ajoutent principalement des questions pratiques originales. Aucun protocole, bénéfice clinique, résultat esthétique ni diplôme supplémentaire n’est déduit des programmes de formation."
 }

@@ -5,86 +5,256 @@
     "address": "160 rue Grande",
     "city": "Fontainebleau",
     "postalCode": "77300",
-    "appointmentNote": "Sur rendez-vous"
+    "appointmentNote": "Sur rendez-vous",
+    "sameAs": [
+      "https://pole-sante-sport-fontainebleau.fr/faciale.html",
+      "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+    ]
   },
   "home": {
-    "eyebrow": "Facialiste · Fontainebleau",
-    "title": "Le temps de vous\nretrouver.",
-    "description": "À Fontainebleau, Nadège Becquet vous reçoit sur rendez-vous pour un massage du visage. Découvrez ses soins et prenez le temps de choisir celui qui vous correspond."
+    "eyebrow": "Facialiste à Fontainebleau",
+    "title": "Le soin du visage,\ntout simplement.",
+    "description": "Massage du visage et Authentique Kobido® avec Nadège Becquet. Au 160 rue Grande, sur rendez-vous au 06 83 49 30 34."
   },
   "about": {
-    "intro": "Nadège Becquet est facialiste à Fontainebleau. Elle propose quatre approches du massage du visage, à découvrir selon vos envies : détente, massage japonais Kobi-do, Gua Sha et stretching facial.\n\nElle figure dans l’annuaire des praticiens certifiés de l’École du Kobido avec les mentions Authentique Kobido®, Expert et Ambassadrice Authentique Kobido®. Un repère concret pour découvrir sa pratique et engager un premier échange."
+    "intro": "Facialiste à Fontainebleau, Nadège Becquet vous reçoit au 160 rue Grande pour découvrir le massage du visage et choisir votre soin.\n\nElle est référencée par l’École du Kobido en Authentique Kobido®, avec les mentions Expert et Ambassadrice. Pour une première visite, le plus simple est de lui téléphoner."
   },
   "services": [
     {
       "slug": "massage-facial-detente",
       "title": "Massage facial détente",
-      "summary": "Faire une place à la détente, le temps d’un massage du visage.",
-      "body": "Vous avez envie de vous accorder une pause ? Le massage facial détente fait partie des soins proposés par Nadège. C’est une porte d’entrée pour découvrir le massage du visage ou simplement réserver un moment pour soi.\n\nLors de la prise de rendez-vous, indiquez ce que vous recherchez et posez vos questions sur le déroulement. Nadège pourra vous préciser les modalités du soin, sa durée et son tarif avant de confirmer votre venue."
+      "summary": "Une pause consacrée au massage du visage.",
+      "body": "Le massage facial détente est une invitation à consacrer un moment à votre visage. Ce soin figure parmi les quatre approches proposées par Nadège au cabinet de Fontainebleau.\n\nPour une première découverte, vous pouvez partir de cette envie simple : faire une pause et recevoir un massage du visage. Indiquez vos préférences de confort et le temps dont vous disposez lors de la réservation.\n\nNadège vous précisera le déroulement, la durée et le tarif avant de confirmer votre rendez-vous.",
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        }
+      ]
     },
     {
       "slug": "kobido",
       "title": "Massage japonais Kobi-do",
-      "summary": "Découvrir le massage japonais du visage auprès d’une praticienne référencée par l’École du Kobido.",
-      "body": "Le massage japonais Kobi-do figure parmi les soins proposés au cabinet. Pour découvrir cette pratique, un premier échange permet de poser vos questions et de savoir à quoi vous attendre lors du rendez-vous.\n\nNadège est référencée dans l’annuaire de l’École du Kobido pour l’Authentique Kobido®, avec les mentions Expert et Ambassadrice. Demandez-lui les particularités de sa pratique ainsi que les modalités du soin avant de réserver."
+      "summary": "Le massage japonais du visage, avec une praticienne certifiée.",
+      "body": "Le Kobido est un massage japonais du visage. Le programme de l’École du Kobido décrit une gestuelle organisée selon les zones du visage, avec une attention particulière au rythme et à la précision.\n\nNadège est référencée par cette école en Authentique Kobido®, avec les mentions Expert et Ambassadrice. Le soin apparaît sous le nom massage japonais Kobi-do sur sa présentation au Pôle Santé Sport.\n\nPour découvrir cette pratique à Fontainebleau, réservez directement auprès de Nadège. Les modalités du soin se confirment lors de votre échange.",
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Nadège Becquet dans l’annuaire de l’École du Kobido",
+          "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+        },
+        {
+          "title": "Formation Authentique Kobido, École du Kobido",
+          "url": "https://www.ecoledukobido.com/formations/authentiquekobido"
+        }
+      ]
     },
     {
       "slug": "gua-sha",
       "title": "Massage Gua Sha",
-      "summary": "Explorer une autre approche du massage du visage.",
-      "body": "Le Gua Sha fait partie de la carte de soins de Nadège. Si vous connaissez son nom sans l’avoir encore découvert en cabinet, la prise de contact est l’occasion de comprendre la place qu’il peut prendre dans votre rendez-vous.\n\nVous pouvez demander quels gestes et accessoires sont utilisés, comment la séance est organisée et si cette approche correspond à votre recherche. La durée et le tarif sont à convenir directement avec Nadège."
+      "summary": "Le massage du visage accompagné d’un outil Gua Sha.",
+      "body": "Le massage Gua Sha fait intervenir un outil appliqué sur le visage. Le geste de la praticienne accompagne le déplacement de cet accessoire, présenté notamment dans la [formation Gua Sha de LB Facialistes](https://lbfacialistes.com/fr/parcours-estheticienne/55-gua-sha.html).\n\nCette approche figure parmi les soins proposés par Nadège. Si vous souhaitez la découvrir, vous pouvez lui demander quelle place occupent l’outil et les gestes manuels dans sa pratique.\n\nLe rendez-vous se prend par téléphone. Précisez que vous êtes intéressée par le Gua Sha pour connaître le soin proposé et ses modalités.",
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Programme Devenir Facialiste, Académie des Facialistes",
+          "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+        },
+        {
+          "title": "Formation Gua Sha, LB Facialistes",
+          "url": "https://lbfacialistes.com/fr/parcours-estheticienne/55-gua-sha.html"
+        }
+      ]
     },
     {
       "slug": "stretching-facial",
       "title": "Stretching facial",
-      "summary": "Prendre le temps de découvrir cette pratique du visage.",
-      "body": "Le stretching facial est l’une des quatre prestations présentées par Nadège. Avant de choisir, prenez le temps d’échanger sur vos attentes et de lui demander en quoi ce soin se distingue des autres massages proposés.\n\nVous hésitez entre plusieurs approches ? Il n’est pas nécessaire de connaître leur technique pour prendre contact. Expliquez simplement votre envie ; Nadège pourra vous présenter les possibilités et leurs modalités."
+      "summary": "Une autre approche manuelle du soin du visage.",
+      "body": "Le stretching facial est une approche manuelle du massage du visage. Le [programme de l’Académie des Facialistes](https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf) présente notamment un travail d’étirement et de pétrissage, associé à la connaissance des muscles du visage.\n\nCe soin figure dans l’offre de Nadège à Fontainebleau. Il peut être un point de départ pour découvrir une gestuelle différente du massage avec un outil Gua Sha.\n\nLors de la réservation, expliquez votre envie et vos préférences. Nadège vous présentera sa pratique ainsi que la durée et le tarif du soin.",
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Programme Devenir Facialiste, Académie des Facialistes",
+          "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+        }
+      ]
     }
   ],
   "faqs": [
     {
-      "question": "Comment prendre rendez-vous ?",
-      "answer": "Contactez Nadège au 06 83 49 30 34. Indiquez le soin qui vous intéresse et vos disponibilités pour convenir d’un rendez-vous."
+      "question": "Comment réserver un soin ?",
+      "answer": "Appelez Nadège au 06 83 49 30 34 pour choisir votre soin et convenir d’un créneau."
     },
     {
       "question": "Où se trouve le cabinet ?",
-      "answer": "Nadège reçoit au 160 rue Grande, 77300 Fontainebleau. Utilisez les liens d’itinéraire de la page Contact pour préparer votre trajet."
+      "answer": "Au 160 rue Grande, 77300 Fontainebleau. La page Contact propose les itinéraires Google Maps, Waze et Apple Plans."
     },
     {
       "question": "Quels sont les horaires ?",
-      "answer": "Les soins ont lieu sur rendez-vous. Appelez Nadège pour connaître les créneaux disponibles et confirmer l’heure de votre venue."
+      "answer": "Nadège reçoit sur rendez-vous. Les créneaux disponibles se confirment par téléphone."
     },
     {
-      "question": "Quel soin choisir pour une première visite ?",
-      "answer": "Vous pouvez prendre contact sans avoir arrêté votre choix. Présentez votre envie et demandez à Nadège de vous expliquer les différences entre les soins."
+      "question": "Faut-il choisir son soin avant d’appeler ?",
+      "answer": "Vous pouvez appeler sans avoir choisi. Nadège vous présentera les différences entre les soins."
     },
     {
-      "question": "Combien coûte un soin et combien de temps dure-t-il ?",
-      "answer": "Demandez le tarif et la durée du soin qui vous intéresse lors de la prise de contact, avant de confirmer votre rendez-vous."
+      "question": "Quels sont les tarifs et les durées ?",
+      "answer": "Demandez le tarif et la durée du soin au moment de la prise de contact, avant de confirmer votre rendez-vous."
     },
     {
-      "question": "Comment préparer ma venue ?",
-      "answer": "Confirmez le soin, l’heure et l’adresse avec Nadège. Profitez de cet échange pour demander les consignes de préparation éventuelles et signaler tout besoin particulier pour l’accès au cabinet."
+      "question": "Comment préparer une première visite ?",
+      "answer": "Confirmez l’heure, le soin et les éventuelles consignes de préparation. Pour un besoin particulier d’accès, échangez avec Nadège avant votre déplacement."
     }
   ],
   "posts": [
     {
       "slug": "premier-rendez-vous",
-      "title": "Un premier rendez-vous, tout simplement",
-      "excerpt": "Les questions utiles pour préparer votre première visite chez une facialiste.",
-      "body": "Un premier rendez-vous commence par quelques mots sur votre envie. Souhaitez-vous découvrir le massage du visage, vous accorder un moment de détente ou en savoir plus sur une pratique précise ? Vous n’avez pas besoin de connaître les termes techniques pour prendre contact.\n\nAvant de confirmer, demandez la durée, le tarif et le déroulement du soin. Vérifiez également l’heure, l’adresse et les éventuelles consignes de préparation. Si vous avez un besoin particulier pour l’accès, évoquez-le dès cet échange.\n\nGardez le numéro du cabinet et préparez votre itinéraire. Ces quelques repères vous permettent d’arriver en sachant où vous rendre et ce qui a été convenu. Pour une question personnelle sur le soin, privilégiez un échange direct avec Nadège."
+      "title": "Premier rendez-vous chez une facialiste : comment se préparer ?",
+      "excerpt": "Que demander, que prévoir et comment réserver votre première visite à Fontainebleau.",
+      "category": "Première visite",
+      "relatedServices": [
+        "massage-facial-detente",
+        "kobido"
+      ],
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Nadège Becquet dans l’annuaire de l’École du Kobido",
+          "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+        }
+      ],
+      "body": "Un premier rendez-vous chez une facialiste se prépare simplement : choisissez un créneau, précisez votre envie et gardez les informations pratiques à portée de main. Vous pouvez appeler Nadège sans avoir déjà décidé du soin.\n\n## Avant de réserver\n\nUne envie de détente, la découverte du Kobido ou la curiosité du Gua Sha suffisent pour commencer l’échange. Pour organiser votre visite, vérifiez :\n\n- le soin prévu et ce qu’il comprend ;\n- sa durée et son tarif ;\n- les moyens de paiement ;\n- les modalités d’annulation ou de report.\n\nSi votre emploi du temps est serré, précisez l’heure à laquelle vous devez repartir. Pensez aussi au temps de trajet avant et après le rendez-vous.\n\n## Les détails de préparation\n\nDemandez s’il faut venir démaquillée ou prévoir quelque chose de particulier. Vous pouvez évoquer vos préférences de confort et poser vos questions sur les produits utilisés. Ces détails se règlent plus facilement au moment de la réservation.\n\n## Le jour de la visite\n\nLe cabinet se trouve au 160 rue Grande, à Fontainebleau. La page Contact propose les itinéraires et un QR code à ouvrir sur votre téléphone. Pour une question sur l’entrée ou un besoin d’accessibilité, échangez avec Nadège avant de partir.\n\nPour réserver votre première visite, appelez le 06 83 49 30 34.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
     },
     {
       "slug": "choisir-son-soin",
-      "title": "Trouver le soin qui vous correspond",
-      "excerpt": "Détente, Kobi-do, Gua Sha, stretching facial : par où commencer ?",
-      "body": "Les noms des soins ne disent pas toujours tout de l’expérience proposée. Commencez par votre envie, puis demandez à Nadège ce qui distingue les différentes approches dans sa pratique. Ce dialogue est plus utile qu’un choix fondé uniquement sur un intitulé.\n\nQuelques questions peuvent guider votre échange : comment se déroule le rendez-vous ? Quelle place occupe chaque technique ? Quelle durée faut-il prévoir ? Quel est le tarif ? Les réponses vous aideront à choisir en ayant les informations concrètes à disposition.\n\nVous pouvez aussi garder votre choix ouvert lors du premier contact. Les pages des soins donnent un premier aperçu ; l’échange avec Nadège permet de préciser votre demande avant de réserver."
+      "title": "Quel massage du visage choisir à Fontainebleau ?",
+      "excerpt": "Quatre soins proposés par Nadège Becquet et les questions utiles pour choisir.",
+      "category": "Choisir son soin",
+      "relatedServices": [
+        "massage-facial-detente",
+        "kobido",
+        "gua-sha",
+        "stretching-facial"
+      ],
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Programme Devenir Facialiste, Académie des Facialistes",
+          "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+        }
+      ],
+      "body": "Détente, Kobi-do, Gua Sha ou stretching facial : Nadège propose quatre approches du massage du visage. Voici les repères pour choisir celle que vous souhaitez découvrir.\n\n## À chaque soin son point de départ\n\nLe massage facial détente est un choix à explorer si votre première envie est de vous accorder une pause consacrée au visage.\n\nLe Kobi-do vous fait découvrir une tradition de massage japonais. Nadège est référencée en Authentique Kobido® par l’École du Kobido.\n\nLe Gua Sha associe le massage à l’utilisation d’un outil. Il peut retenir votre attention si vous êtes curieuse de cette manière d’accompagner le geste.\n\nLe stretching facial est une approche manuelle qui fait appel notamment à des mouvements d’étirement, décrits dans les programmes de formation de l’Académie des Facialistes.\n\n## Partir de vos préférences\n\nPour affiner le choix, prenez en compte ce qui vous attire : une découverte, une technique que vous connaissez déjà ou un moment de détente. Vous pouvez aussi indiquer les aspects du toucher que vous appréciez et le temps dont vous disposez.\n\nSi deux soins vous intéressent, demandez leur différence dans la pratique de Nadège. Une explication du déroulement sera plus utile qu’un intitulé seul.\n\n## Confirmer votre rendez-vous\n\nAvant de réserver, faites préciser le soin retenu, sa durée et son tarif. Les pages de prestations permettent de parcourir les différentes approches ; Nadège vous reçoit ensuite sur rendez-vous à Fontainebleau.\n\nAppelez le 06 83 49 30 34 pour choisir votre créneau.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
     },
     {
       "slug": "venir-a-fontainebleau",
-      "title": "Préparer votre venue à Fontainebleau",
-      "excerpt": "L’adresse et quelques réflexes pratiques pour organiser votre déplacement.",
-      "body": "Le rendez-vous avec Nadège a lieu au 160 rue Grande, à Fontainebleau. Enregistrez cette adresse complète dans votre application d’itinéraire et vérifiez le point d’arrivée avant votre départ.\n\nConsultez votre trajet au moment de partir : circulation, travaux et transports peuvent modifier le temps de déplacement. Les liens d’accès de la page Contact vous permettent d’ouvrir l’adresse dans votre application habituelle.\n\nPour une question sur l’entrée du bâtiment ou un besoin particulier d’accessibilité, contactez Nadège en amont. Confirmez votre horaire de rendez-vous directement avec elle ; une indication d’ouverture trouvée dans un annuaire ne remplace pas cette confirmation."
+      "title": "Venir au cabinet de Nadège Becquet à Fontainebleau",
+      "excerpt": "Adresse, train, trajet en ville et stationnement : les repères pour préparer votre venue.",
+      "category": "Accès au cabinet",
+      "relatedServices": [],
+      "sources": [
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        },
+        {
+          "title": "Venir et se déplacer, Fontainebleau Tourisme",
+          "url": "https://www.fontainebleau-tourisme.com/fr/preparer-son-sejour/infos-pratiques/venir-au-pays-de-fontainebleau-train-voiture-velo/"
+        },
+        {
+          "title": "Stationnement en voirie à Fontainebleau, Interparking",
+          "url": "https://www.interparking.fr/fr/voirie-fontainebleau/"
+        }
+      ],
+      "body": "Nadège Becquet vous reçoit au 160 rue Grande, 77300 Fontainebleau. Enregistrez cette adresse complète pour préparer votre déplacement.\n\n## En train\n\nLa gare de Fontainebleau-Avon est desservie par la ligne R depuis Paris Gare de Lyon. [Fontainebleau Tourisme](https://www.fontainebleau-tourisme.com/fr/preparer-son-sejour/infos-pratiques/venir-au-pays-de-fontainebleau-train-voiture-velo/) indique que le bus 3401 rejoint le centre-ville depuis la gare.\n\nCalculez votre parcours jusqu’au 160 rue Grande, puis vérifiez les horaires et les perturbations le jour du rendez-vous. Pensez au trajet de retour en tenant compte du temps prévu sur place.\n\n## En voiture\n\nLa page Contact ouvre l’adresse dans Google Maps, Waze ou Apple Plans. Prévoyez le temps de stationner et de rejoindre l’entrée à pied.\n\nLes zones et conditions de stationnement en voirie sont publiées par [Interparking à Fontainebleau](https://www.interparking.fr/fr/voirie-fontainebleau/). Consultez-les pour préparer votre venue et vérifiez les indications affichées sur place.\n\n## Avant de partir\n\nPour une question sur l’entrée, l’étage ou l’accessibilité, contactez Nadège en amont. Gardez avec vous l’heure du rendez-vous et son téléphone pour la prévenir en cas d’imprévu.\n\nLe QR code de la page Contact permet de transférer l’itinéraire Google Maps sur votre téléphone. Vous pourrez ainsi retrouver l’adresse au moment du départ.\n\nPour réserver ou préparer votre venue : 06 83 49 30 34.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
+    },
+    {
+      "slug": "facialiste",
+      "title": "Qu’est-ce qu’une facialiste ?",
+      "excerpt": "Comprendre la place du massage du visage et les repères utiles pour choisir une praticienne.",
+      "category": "Comprendre les soins",
+      "relatedServices": [
+        "massage-facial-detente",
+        "stretching-facial"
+      ],
+      "sources": [
+        {
+          "title": "Parcours Facialiste, École du Kobido",
+          "url": "https://www.ecoledukobido.com/formations/facialiste"
+        },
+        {
+          "title": "Nadège Becquet dans l’annuaire de l’École du Kobido",
+          "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+        }
+      ],
+      "body": "Une facialiste développe une pratique centrée sur le massage du visage. Elle peut proposer plusieurs techniques, avec des gestes manuels ou des accessoires selon les soins.\n\n## Le visage au centre de la pratique\n\nLe parcours Facialiste de l’École du Kobido associe apprentissage du massage, connaissances du visage et relation avec la clientèle. Il met notamment l’accent sur le toucher, la précision et la préparation de la séance.\n\nPour découvrir une praticienne, regardez sa carte de soins. Elle vous aidera à comprendre les approches qu’elle propose et à repérer celles que vous aimeriez essayer. Les intitulés peuvent ensuite servir de point de départ à votre échange.\n\n## Des repères pour choisir\n\nUne présentation claire permet de trouver :\n\n- le nom de la praticienne et ses coordonnées ;\n- les techniques proposées ;\n- les formations ou certifications mentionnées ;\n- les modalités de réservation.\n\nLes annuaires des organismes de formation peuvent compléter ces informations. Ils permettent notamment de retrouver une praticienne et les mentions associées à son parcours.\n\n## Nadège Becquet à Fontainebleau\n\nNadège figure dans l’annuaire de l’École du Kobido en Authentique Kobido®, Expert et Ambassadrice. Elle propose le massage facial détente, le Kobi-do, le Gua Sha et le stretching facial.\n\nElle vous reçoit sur rendez-vous au 160 rue Grande. Pour découvrir sa pratique et réserver un soin, appelez le 06 83 49 30 34.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
+    },
+    {
+      "slug": "authentique-kobido",
+      "title": "Authentique Kobido : quels repères avant de réserver ?",
+      "excerpt": "La pratique, la formation et la référence de Nadège Becquet dans l’annuaire de l’école.",
+      "category": "Massage japonais",
+      "relatedServices": [
+        "kobido"
+      ],
+      "sources": [
+        {
+          "title": "Nadège Becquet dans l’annuaire de l’École du Kobido",
+          "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+        },
+        {
+          "title": "Formation Authentique Kobido, École du Kobido",
+          "url": "https://www.ecoledukobido.com/formations/authentiquekobido"
+        }
+      ],
+      "body": "Le Kobido est un massage japonais du visage. L’appellation Authentique Kobido® est celle de la méthode et du parcours de certification présentés par l’École du Kobido.\n\n## Une gestuelle précise\n\nLe [programme de l’école](https://www.ecoledukobido.com/formations/authentiquekobido) organise l’apprentissage en plusieurs familles de gestes. Il distingue notamment le travail sur chaque côté du visage et celui de sa partie médiane. Le rythme, l’enchaînement et la précision occupent une place importante dans cette formation.\n\nCes éléments donnent des repères pour comprendre ce qui caractérise cette approche du massage facial. Si vous découvrez le Kobido, vous pouvez demander à Nadège comment elle le présente dans sa pratique et ce que comprend le rendez-vous.\n\n## La référence de Nadège\n\nLa fiche de Nadège Becquet dans l’annuaire de l’école porte les mentions Authentique Kobido®, Expert et Ambassadrice Authentique Kobido®. Vous pouvez la consulter dans les sources de cet article.\n\nSur la page du Pôle Santé Sport, la prestation est intitulée massage japonais Kobi-do. Elle figure aux côtés du massage facial détente, du Gua Sha et du stretching facial.\n\n## Découvrir le soin\n\nPour une première visite, expliquez votre envie et vos préférences. Faites préciser la durée, le tarif et les éventuelles consignes de préparation avant de confirmer.\n\nNadège reçoit au 160 rue Grande à Fontainebleau. La réservation se fait au 06 83 49 30 34.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
+    },
+    {
+      "slug": "gua-sha",
+      "title": "Massage Gua Sha du visage : le rôle de l’outil et du geste",
+      "excerpt": "Comprendre le principe du Gua Sha et préparer vos questions avant un soin en cabinet.",
+      "category": "Comprendre les soins",
+      "relatedServices": [
+        "gua-sha",
+        "massage-facial-detente"
+      ],
+      "sources": [
+        {
+          "title": "Programme Devenir Facialiste, Académie des Facialistes",
+          "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+        },
+        {
+          "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
+          "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+        }
+      ],
+      "body": "Le massage facial Gua Sha associe le geste à un outil appliqué sur le visage. Cet accessoire se décline en différentes formes, que la praticienne choisit et positionne selon le travail réalisé.\n\n## Le rôle de l’outil\n\nLe [programme de l’Académie des Facialistes](https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf) présente l’apprentissage du placement et des mouvements de l’outil. Il mentionne notamment des gestes de lissage et d’effleurage, ainsi que l’entretien du matériel.\n\nLa manière de tenir et de déplacer le Gua Sha fait donc partie de la technique. Sa forme ou sa couleur ne suffisent pas à décrire le massage que vous recevrez.\n\n## Découvrir le soin en cabinet\n\nPour comprendre l’expérience proposée, intéressez-vous à la place de l’outil dans la séance et à son association avec les gestes manuels. Vous pouvez aussi demander quels produits sont utilisés et évoquer vos préférences de confort.\n\nSi vous avez déjà découvert le Gua Sha ailleurs, précisez ce que vous avez apprécié. Si c’est une première fois, dites-le simplement : cela donnera un point de départ concret à l’échange.\n\n## Réserver à Fontainebleau\n\nNadège propose le massage Gua Sha au 160 rue Grande. La durée, le tarif et le déroulement se précisent lors de la prise de rendez-vous.\n\nPour découvrir cette approche avec Nadège, appelez le 06 83 49 30 34.",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-11"
     }
   ],
   "demo": {
@@ -92,12 +262,32 @@
   },
   "sources": [
     {
-      "title": "Présentation de Nadège Becquet — Pôle Santé Sport Fontainebleau",
+      "title": "Nadège Becquet au Pôle Santé Sport Fontainebleau",
       "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
     },
     {
-      "title": "Annuaire des praticiens certifiés — École du Kobido",
-      "url": "https://www.ecoledukobido.com/praticiens-certifies"
+      "title": "Nadège Becquet dans l’annuaire de l’École du Kobido",
+      "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge"
+    },
+    {
+      "title": "Formation Authentique Kobido, École du Kobido",
+      "url": "https://www.ecoledukobido.com/formations/authentiquekobido"
+    },
+    {
+      "title": "Programme Devenir Facialiste, Académie des Facialistes",
+      "url": "https://lacademiedesfacialistes.com/wp-content/uploads/2023/11/Programme-Devenir-Facialiste.pdf"
+    },
+    {
+      "title": "Venir et se déplacer, Fontainebleau Tourisme",
+      "url": "https://www.fontainebleau-tourisme.com/fr/preparer-son-sejour/infos-pratiques/venir-au-pays-de-fontainebleau-train-voiture-velo/"
+    },
+    {
+      "title": "Stationnement en voirie à Fontainebleau, Interparking",
+      "url": "https://www.interparking.fr/fr/voirie-fontainebleau/"
+    },
+    {
+      "title": "Parcours Facialiste, École du Kobido",
+      "url": "https://www.ecoledukobido.com/formations/facialiste"
     }
   ],
   "pages": [
@@ -105,23 +295,29 @@
       "slug": "mentions-legales",
       "title": "Mentions légales de la démo — Nadège Becquet",
       "description": "Statut de la proposition publique, hébergement et informations juridiques à compléter avant le lancement officiel du site.",
-      "body": "Statut du site\n\nCette proposition publique présente un projet de refonte pour Nadège Becquet. Elle ne constitue pas le site officiel et ne permet ni achat ni réservation confirmée. Le lien téléphonique ouvre l’application d’appel de votre appareil.\n\nÉdition et publication\n\nCette démo est déployée depuis le compte GitHub Connected-Mate. L’identité juridique complète de son responsable de publication reste à renseigner. Nadège Becquet n’est pas présentée comme ayant approuvé cette version.\n\nAvant lancement officiel, l’éditeur devra compléter son identité et statut juridique, son immatriculation, ses coordonnées de contact, le responsable de publication et, selon l’activité, les informations de médiation et les conditions applicables.\n\nHébergement de la démo\n\nGitHub Pages, service de GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis. Contacter GitHub Support (https://support.github.com/).\n\nImages et création\n\nComposition, signature typographique et illustrations préparées pour cette proposition. La version publique utilise des illustrations originales ; les aperçus photographiques restent dans la maquette locale en attendant confirmation des droits. Les fichiers originaux et leurs autorisations de publication doivent être validés avant exploitation officielle. Aucun logo officiel n’a été fourni.\n\nDurée de la démo\n\nRetrait prévu le 11 novembre 2026. La consigne de non-indexation ne rend pas le site privé et n’empêche ni le partage, ni les captures, ni la conservation par des tiers.\n\nCette page est un état provisoire transparent, à compléter avant une mise en ligne officielle. Références : mentions obligatoires d’un site professionnel (https://entreprendre.service-public.gouv.fr/vosdroits/F31228)."
+      "body": "## Statut du site\n\nCette proposition publique présente un projet de refonte pour Nadège Becquet. Elle ne constitue pas le site officiel et ne permet ni achat ni réservation confirmée. Le lien téléphonique ouvre l’application d’appel de votre appareil.\n\n## Édition et publication\n\nCette démo est déployée depuis le compte GitHub Connected-Mate. L’identité juridique complète de son responsable de publication reste à renseigner. Nadège Becquet n’est pas présentée comme ayant approuvé cette version.\n\nAvant lancement officiel, l’éditeur devra compléter son identité et statut juridique, son immatriculation, ses coordonnées de contact, le responsable de publication et, selon l’activité, les informations de médiation et les conditions applicables.\n\n## Hébergement de la démo\n\nGitHub Pages, service de GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis. Contacter GitHub Support (https://support.github.com/).\n\n## Images et création\n\nComposition et signature typographique préparées pour cette proposition. Les droits d’utilisation des photographies ont été confirmés explicitement pour ce projet le 11 octobre 2026. Les photographies proviennent de la capture fournie pour le projet et de la fiche publique de Nadège dans l’annuaire de l’École du Kobido. Aucun logo officiel n’a été fourni.\n\n## Durée de la démo\n\nRetrait prévu le 11 novembre 2026. La consigne de non-indexation ne rend pas le site privé et n’empêche ni le partage, ni les captures, ni la conservation par des tiers.\n\nCette page est un état provisoire transparent, à compléter avant une mise en ligne officielle. Références : mentions obligatoires d’un site professionnel (https://entreprendre.service-public.gouv.fr/vosdroits/F31228)."
     },
     {
       "slug": "confidentialite",
       "title": "Confidentialité & données — Démo Nadège Becquet",
       "description": "Comprendre les données techniques de la démo, les liens externes et le chargement facultatif de Google Maps.",
-      "body": "Pas de formulaire de collecte\n\nCette démo ne recueille pas de demande via formulaire, ne comporte aucun paiement et ne charge aucun outil d’analyse d’audience. Les échanges par téléphone ou Instagram relèvent des services concernés.\n\nUne préférence dans votre navigateur\n\nLe stockage de session conserve uniquement votre choix de fermer l’explication de la démo, pendant l’onglet en cours. Il ne contient ni identité ni historique de navigation et n’est pas envoyé au serveur.\n\nCarte et liens externes\n\nGoogle Maps est chargé uniquement si vous cliquez sur le bouton correspondant. Google reçoit alors les données techniques nécessaires, notamment votre adresse IP. Les itinéraires Google Maps, Waze et Apple Plans ouvrent les services respectifs, soumis à leurs propres règles de confidentialité.\n\nHébergement\n\nGitHub peut traiter des données techniques pour faire fonctionner et sécuriser son hébergement. Consultez la politique de confidentialité GitHub (https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).\n\nAvant la mise en ligne officielle\n\nL’identité du responsable de traitement, le contact pour l’exercice des droits et les règles de tout futur formulaire ou service de réservation devront être complétés et validés. Aucun back-office ni identifiant d’administration n’est exposé sur GitHub Pages."
+      "body": "## Pas de formulaire de collecte\n\nCette démo ne recueille pas de demande via formulaire, ne comporte aucun paiement et ne charge aucun outil d’analyse d’audience. Les échanges par téléphone ou Instagram relèvent des services concernés.\n\n## Une préférence dans votre navigateur\n\nLe stockage de session conserve uniquement votre choix de fermer l’explication de la démo, pendant l’onglet en cours. Il ne contient ni identité ni historique de navigation et n’est pas envoyé au serveur.\n\n## Carte et liens externes\n\nGoogle Maps est chargé uniquement si vous cliquez sur le bouton correspondant. Google reçoit alors les données techniques nécessaires, notamment votre adresse IP. Les itinéraires Google Maps, Waze et Apple Plans ouvrent les services respectifs, soumis à leurs propres règles de confidentialité.\n\n## Hébergement\n\nGitHub peut traiter des données techniques pour faire fonctionner et sécuriser son hébergement. Consultez la politique de confidentialité GitHub (https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).\n\n## Avant la mise en ligne officielle\n\nL’identité du responsable de traitement, le contact pour l’exercice des droits et les règles de tout futur formulaire ou service de réservation devront être complétés et validés. Aucun back-office ni identifiant d’administration n’est exposé sur GitHub Pages."
     },
     {
       "slug": "sources",
       "title": "Sources & informations à confirmer — Démo Nadège Becquet",
       "description": "Traçabilité des informations utilisées pour la démo : sources publiques, informations concordantes, incertitudes et validations avant lancement.",
-      "body": "Informations concordantes\n\nNadège Becquet, facialiste, 160 rue Grande, 77300 Fontainebleau. Téléphone : 06 83 49 30 34. Accueil sur rendez-vous.\n\nSite du Pôle Santé Sport Fontainebleau (https://pole-sante-sport-fontainebleau.fr/faciale.html) : coordonnées et quatre massages présentés.\n\nAnnuaire de l’École du Kobido (https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge) : certification Authentique Kobido® et adresse.\n\nCapture Instagram fournie : identité visuelle de référence, portrait, téléphone et adresse.\n\nÀ confirmer avant lancement\n\nHoraires détaillés, durées, tarifs et disponibilité actuelle des prestations.\n\nIdentité juridique de l’éditeur, SIRET, coordonnées de contact officielles, responsable de publication et médiateur de la consommation.\n\nDroits des photographies originales, logo officiel et validation des textes par Nadège.\n\nFiche Google officielle, transports, stationnement et accessibilité.\n\nDiplôme Méthode LB et soin L’Odaïtès mentionnés uniquement sur la capture : pas de page de prestation dédiée sans confirmation.\n\nLes annuaires ne font pas foi pour tout\n\nFresha (https://www.fresha.com/fr/lvp/nadege-becquet-facialiste-certifiee-authentique-kobido-r-rue-grande-bxNK4X) précise que l’établissement n’est pas affilié. Les horaires, catégories et prestations supplémentaires de cette fiche ne sont pas repris comme des faits établis. Ce lien n’est pas présenté comme une réservation en ligne.\n\nLe site du Pôle comporte aussi une mention du 143 rue Grande pour le centre. La section consacrée à Nadège donne bien le 160 rue Grande, adresse corroborée par l’École du Kobido.\n\nArticle de presse signalé\n\nArticle sur actu.fr (https://actu.fr/ile-de-france/fontainebleau_77186/a-fontainebleau-nadege-becquet-prend-soin-de-votre-visage_59750151.html) transmis comme référence ; contenu non accessible pendant cette vérification. Aucun propos ni résultat n’en est extrait.\n\nVérification documentaire : 11 octobre 2026. Aucun avis client, note, tarif ou résultat garanti n’a été créé."
+      "body": "## Informations concordantes\n\nNadège Becquet, facialiste, 160 rue Grande, 77300 Fontainebleau. Téléphone : 06 83 49 30 34. Accueil sur rendez-vous.\n\nSite du Pôle Santé Sport Fontainebleau (https://pole-sante-sport-fontainebleau.fr/faciale.html) : coordonnées et quatre massages présentés.\n\nAnnuaire de l’École du Kobido (https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge) : certification Authentique Kobido® et adresse.\n\nCapture Instagram fournie : identité visuelle de référence, portrait, téléphone et adresse. Les droits d’utilisation des photographies ont été confirmés explicitement par l’utilisateur le 11 octobre 2026.\n\n## À confirmer avant lancement\n\nHoraires détaillés, durées, tarifs et disponibilité actuelle des prestations.\n\nIdentité juridique de l’éditeur, SIRET, coordonnées de contact officielles, responsable de publication et médiateur de la consommation.\n\nLogo officiel et validation des textes par Nadège.\n\nFiche Google officielle et détails de l’accès au cabinet : entrée, étage et accessibilité. Les repères généraux de transport et de stationnement cités dans le journal doivent être revérifiés au moment du déplacement.\n\nDiplôme Méthode LB et soin L’Odaïtès mentionnés uniquement sur la capture : pas de page de prestation dédiée sans confirmation.\n\n## Les annuaires ne font pas foi pour tout\n\nFresha (https://www.fresha.com/fr/lvp/nadege-becquet-facialiste-certifiee-authentique-kobido-r-rue-grande-bxNK4X) précise que l’établissement n’est pas affilié. Les horaires, catégories et prestations supplémentaires de cette fiche ne sont pas repris comme des faits établis. Ce lien n’est pas présenté comme une réservation en ligne.\n\nLe site du Pôle comporte aussi une mention du 143 rue Grande pour le centre. La section consacrée à Nadège donne bien le 160 rue Grande, adresse corroborée par l’École du Kobido.\n\n## Article de presse signalé\n\nArticle sur actu.fr (https://actu.fr/ile-de-france/fontainebleau_77186/a-fontainebleau-nadege-becquet-prend-soin-de-votre-visage_59750151.html) transmis comme référence ; contenu non accessible pendant cette vérification. Aucun propos ni résultat n’en est extrait.\n\nVérification documentaire : 11 octobre 2026. Aucun avis client, note, tarif ou résultat garanti n’a été créé.\n\n## Sources des articles\n\nChaque article indique ses sources. Les textes de présentation générale des techniques s’appuient sur les organismes de formation cités. Ils ne reproduisent pas les promesses de résultat figurant sur certains sites et ne décrivent pas un protocole personnel non vérifié.\n\nLes articles sont des contenus éditoriaux préparés pour la démo. Ils ne sont pas attribués à Nadège comme auteure et leur validation finale reste nécessaire avant le lancement officiel."
     }
   ],
   "media": {
-    "photosAuthorized": false,
-    "note": "Droits de republication demandés, confirmation en attente. Capture conservée uniquement dans .local/."
+    "photosAuthorized": true,
+    "note": "Droits d’utilisation des photographies confirmés explicitement par l’utilisateur le 11 octobre 2026. Réutilisation autorisée pour ce projet.",
+    "shareImage": {
+      "path": "assets/photo-nadege-portrait-noir-blanc.jpg",
+      "width": 1080,
+      "height": 1080,
+      "alt": "Portrait de Nadège Becquet, facialiste"
+    }
   }
 }

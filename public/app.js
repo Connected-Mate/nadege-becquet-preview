@@ -17,6 +17,8 @@
   document.querySelectorAll('[data-demo-close]').forEach(b=>b.addEventListener('click',close));
   let seen=false;try{seen=sessionStorage.getItem('nadege-demo-seen')==='1'}catch{}
   if(dialog&&!seen)show();
+  const copyButton=document.querySelector('[data-copy-phone]');
+  copyButton?.addEventListener('click',async()=>{const status=document.querySelector('.copy-status');try{await navigator.clipboard.writeText(copyButton.dataset.copyPhone);status.textContent='Numéro copié.';}catch{status.textContent='Sélectionnez le numéro affiché pour le copier.';}});
   const mapButton=document.querySelector('#load-map');
   mapButton?.addEventListener('click',()=>{const slot=document.querySelector('#map-slot');const frame=document.createElement('iframe');frame.title='Carte Google Maps : 160 rue Grande, Fontainebleau';frame.src=`https://maps.google.com/maps?q=${encodeURIComponent(mapButton.dataset.mapQuery)}&output=embed`;frame.loading='lazy';frame.referrerPolicy='no-referrer-when-downgrade';slot.replaceChildren(frame);});
 })();

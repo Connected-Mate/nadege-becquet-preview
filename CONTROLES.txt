@@ -1,53 +1,67 @@
 RÉSULTATS DES CONTRÔLES — 11 OCTOBRE 2026
 
-Périmètre : démo publique de Nadège Becquet, version avec illustrations.
-17 pages de contenu + 404, export statique GitHub Pages et back-office local.
+Périmètre : refonte publique avec photographies autorisées, six articles,
+20 pages de contenu + 404, export GitHub Pages et back-office local.
 
-1. Tests Node : 10/10 réussis.
-Authentification, cookie HttpOnly/SameSite, CSRF/origine/Host, sessions,
-limitation des échecs de connexion, conflits d’enregistrement, validation
-sémantique, historique/restauration, relecture versionnée, confinement des
-fichiers, export, modifications de titres/coordonnées, échappement HTML,
-ajout d’article et retrait des actifs à expiration.
+1. Tests Node : 20/20 réussis.
+Authentification et sessions locales, cookie HttpOnly/SameSite, CSRF/origine/Host,
+limitation des tentatives, conflits d’enregistrement, historique/restauration,
+relecture versionnée, confinement des fichiers, export et expiration.
+Tests supplémentaires : conservation et validation des catégories, dates, sources,
+soins liés, liens d’identité et image de partage. Refus des données malformées,
+URL dangereuses, dates impossibles et soins inconnus avant enregistrement.
+Échappement HTML, JSON-LD, titres/coordonnées modifiés et ajout d’article vérifiés.
 Commande : npm test
 
-2. Export : 18 pages HTML, 454 références, 1 279 contrôles réussis.
-Liens locaux, ressources, ancres, noindex, titres/descriptions uniques,
-données JSON-LD cohérentes, exclusion admin/secrets/.local, QR généré localement.
+2. Export : 21 pages HTML, 657 références, 2 141 contrôles réussis.
+Liens locaux, ressources, ancres, noindex, titres et descriptions uniques,
+URL canoniques et Open Graph, portrait de partage et données structurées exactes :
+établissement, site, pages, prestations, articles, auteur éditorial, fil d’Ariane
+et FAQ visible. Aucune note, aucun avis ni horaire détaillé inventé.
+Exclusion admin/secrets/.local, QR code généré localement, retrait des actifs expirés.
 Commande : npm run build puis npm run check
 
-3. Navigateur : 298/298 contrôles réussis.
+3. Parcours navigateur : 1 139/1 139 contrôles réussis.
 Google Chrome via Playwright, largeurs 1440, 768, 390 et 320 pixels.
-Navigation, FAQ clavier, menu mobile, fermeture popup/Escape et retour du focus,
-coordonnées, liens téléphone/Google Maps/Waze/Apple Plans, absence de carte avant
-consentement, insertion après clic, absence de débordement et protection noindex.
-Retrait testé aux deux côtés de minuit le 11 novembre (heure de Paris).
-Aucune erreur console ou JavaScript.
-Aucune violation détectée par axe sur le périmètre WCAG A/AA analysé.
-Les derniers défauts corrigés : fermeture popup trop proche du surtitre à320px,
-titre Confidentialité débordant, liens de la404, valeurs dynamiques et ajouts d’articles.
+20 pages publiques et 11 rubriques de l’administration sur quatre tailles.
+Navigation, FAQ et popup au clavier, menu mobile, restitution du focus,
+coordonnées, liens d’appel, itinéraires, copie réelle du numéro, carte sur demande,
+sources et sommaires des six articles, métadonnées, liens internes HTTP 200.
+Aucun emoji textuel ni débordement horizontal détecté.
+Zéro erreur console publique, zéro erreur JavaScript, zéro violation axe sur
+le périmètre WCAG A/AA analysé. Aucune réservation ni aucun appel réel déclenché.
 Rapport : artifacts/browser-check.json
 Commande : node tests/browser-check.mjs
 
-4. Administration : parcours connexion → modification → enregistrement →
-historique → export vérifié dans Chrome. Pages légales éditables.
-Aucun débordement ni violation axe sur les vues testées à1440/768/390px.
-Mot de passe local protégé en0600, dossier .local en0700 et exclu de Git.
+4. Relecture finale ciblée : 238/238 contrôles réussis.
+Quatre soins, six articles et nouveaux champs admin vérifiés après les
+dernières modifications. Focus réel du lien d’évitement sur le contenu,
+sources exactes, dates, lisibilité mobile et absence de débordement confirmés.
+Zéro erreur JavaScript/console ni violation axe.
+Résultats complémentaires consignés dans artifacts/final-browser-check.json.
+Parcours d’édition des nouveaux champs vérifié sur une fixture locale isolée.
+Le serveur utilisateur ne reçoit aucun enregistrement de données de test.
+Mot de passe local protégé en 0600, dossier .local en 0700 et exclus de Git.
 
-5. Déploiement distant : premier workflow GitHub terminé avec succès.
-URL racine HTTPS200, noindex et popup constatés dans Chrome.
-Navigation réelle vers contact et lien tel:+33683493034 vérifiés sans lancer d’appel.
-Un dernier déploiement applique la correction visuelle320px et ce rapport.
+5. Déploiement.
+La version finale est publiée par le workflow GitHub « Publish public demo ».
+Le dernier résultat et l’identifiant de commit sont consultables dans GitHub Actions.
+Un contrôle distant vérifie ensuite l’accueil, le contact, le journal, les six
+articles, les photographies, les données SEO et l’absence d’administration publique.
+Le résultat de cette vérification est joint dans artifacts/public-check.json.
 
-6. Dépendances : npm audit — aucune vulnérabilité rapportée à la vérification.
-Police servie localement, licence OFL incluse. Pas de service analytique chargé.
+6. Revue visuelle.
+Accueil, galerie et article relus visuellement. Typographies Cormorant Garamond
+et Manrope servies localement, avec licences OFL incluses. Portrait original HD
+et détails photographiques de la capture fournie. Aucun outil d’analyse chargé.
 
-LIMITES EXPLICITES
-Les contrôles navigateur utilisent des tailles émulées ; aucun appareil physique
-ni audit humain complet avec lecteur d’écran n’a été testé. Axe n’est pas une
-certification d’accessibilité. Aucun appel réel, message ou rendez-vous n’a été envoyé.
-Le QR contient l’URL Google Maps de l’adresse vérifiée ; lecture sur téléphone physique
-non effectuée. Les itinéraires ouvrent les applications tierces selon l’appareil.
-La fiche Google officielle, l’accès PMR et le stationnement restent à confirmer.
-Les droits photo sont en attente : aucune capture photographique de référence dans
-le dépôt public ni dans l’export public. Le retrait futur reste à vérifier à son échéance.
+LIMITES
+Les tailles d’écran sont émulées ; aucun appareil physique ni audit humain complet
+avec lecteur d’écran n’a été testé. Axe ne constitue pas une certification.
+Le QR contient l’URL Google Maps de l’adresse corroborée par les sources ; sa lecture
+sur téléphone physique n’a pas été testée. Les applications tierces déterminent
+les trajets et le comportement à l’ouverture. Les accès du bâtiment restent à confirmer.
+Les photographies de la capture sont de faible définition ; le portrait principal
+est un original de 1080×1080. Les droits d’utilisation ont été confirmés par l’utilisateur.
+La démo est publique, conserve noindex et sa popup ; retrait prévu le 11 novembre 2026.
+La réussite du retrait futur devra être vérifiée à l’échéance.

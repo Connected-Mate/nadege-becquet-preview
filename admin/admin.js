@@ -60,9 +60,31 @@ function simpleFields(container, section, fields) {
 const listFields = {
   services: [['slug', 'Adresse de la page', { max: 100, help: 'Minuscules, chiffres et tirets. Exemple : massage-visage. Modifier cette adresse peut casser un ancien lien.' }], ['title', 'Nom du soin', { max: 240 }], ['summary', 'Résumé', { multiline: true, max: 3000 }], ['body', 'Description détaillée', { multiline: true, max: 20000, rows: 8 }]],
   faqs: [['question', 'Question', { max: 500 }], ['answer', 'Réponse', { multiline: true, max: 6000, rows: 5 }]],
-  posts: [['slug', 'Adresse de l’article', { max: 100, help: 'Minuscules, chiffres et tirets. Gardez une adresse stable après publication.' }], ['title', 'Titre de l’article', { max: 240 }], ['excerpt', 'Introduction courte', { multiline: true, max: 3000 }], ['body', 'Article', { multiline: true, max: 30000, rows: 12 }]],
+  posts: [['slug', 'Adresse de l’article', { max: 100, help: 'Minuscules, chiffres et tirets. Gardez une adresse stable après publication.' }], ['title', 'Titre de l’article', { max: 240 }], ['category', 'Catégorie éditoriale', { max: 160, help: 'Exemple : Première visite, Kobido ou Conseils pratiques.' }], ['datePublished', 'Date de publication', { type: 'date', help: 'Facultative. Saisissez la date réelle de publication ; aucune date n’est ajoutée automatiquement.' }], ['dateModified', 'Date de mise à jour', { type: 'date', help: 'Facultative. Elle doit être égale ou postérieure à la date de publication.' }], ['excerpt', 'Introduction courte', { multiline: true, max: 3000 }], ['body', 'Article', { multiline: true, max: 30000, rows: 12, help: 'Markdown simple : ## Sous-titre, paragraphes séparés par une ligne vide, listes avec - et liens [texte](https://…). Aucun HTML. Relisez les sources et la signature avant publication.' }]],
   pages: [['slug', 'Page à modifier', { choices: [['mentions-legales', 'Mentions légales'], ['confidentialite', 'Confidentialité'], ['sources', 'Sources']], help: 'Chaque page ne peut apparaître qu’une seule fois.' }], ['title', 'Titre de la page', { max: 240, required: true }], ['description', 'Description pour les moteurs', { multiline: true, max: 3000 }], ['body', 'Contenu de la page', { multiline: true, max: 30000, rows: 15, help: 'Texte simple uniquement. Séparez les paragraphes par une ligne vide. Saisissez les adresses de sources en texte ; aucun code HTML.' }]]
 };
+function parseSources(value) {
+  const lines = value.split('\n'); const sources = [];
+  lines.forEach((line, index) => {
+    if (!line.trim()) return;
+    const separator = line.indexOf('|'); const title = line.slice(0, separator).trim(); const url = line.slice(separator + 1).trim();
+    const error = `Sources, ligne ${index + 1} : utilisez « Titre | https://exemple.fr/page », avec une URL HTTP(S) sans identifiants.`;
+    if (separator < 1 || !title || title.length > 240 || url.length > 2048) throw new Error(error);
+    let parsed; try { parsed = new URL(url); } catch { throw new Error(error); }
+    if (!['http:', 'https:'].includes(parsed.protocol) || parsed.username || parsed.password) throw new Error(error);
+    sources.push({ title, url });
+  });
+  if (sources.length > 50) throw new Error('Sources : 50 références maximum par contenu.');
+  return sources;
+}
+function sourceFields(container, item) {
+  const current = Array.isArray(item.sources) ? item.sources.map(source => `${source?.title ?? ''} | ${source?.url ?? ''}`).join('\n') : item.sources === undefined ? '' : typeof item.sources === 'string' ? item.sources : JSON.stringify(item.sources);
+  const input = field(container, 'Sources documentaires', current, value => {
+    try { item.sources = parseSources(value); input.setCustomValidity(''); }
+    catch (error) { item.sources = value; input.setCustomValidity(error.message); }
+  }, { multiline: true, rows: 4, help: 'Une source par ligne : Titre de la source | https://adresse-complete. Gardez uniquement les références qui étayent ce contenu.' });
+  try { parseSources(current); } catch (error) { input.setCustomValidity(error.message); }
+}
 function renderList(container, section) {
   const items = section === 'pages' && state.content.pages === undefined ? [] : state.content[section];
   if (!Array.isArray(items)) throw new Error(`La section « ${section} » doit être une liste.`);
@@ -71,17 +93,26 @@ function renderList(container, section) {
     top.append(element('h2', item.title || item.question || `Élément ${index + 1}`));
     const actions = element('div', undefined, 'card-actions');
     const move = direction => { const destination = index + direction; if (destination < 0 || destination >= items.length) return; [items[index], items[destination]] = [items[destination], items[index]]; markDirty(); render(); };
-    const up = button('↑', () => move(-1), 'icon-button'); up.setAttribute('aria-label', `Monter l’élément ${index + 1}`); up.disabled = index === 0;
-    const down = button('↓', () => move(1), 'icon-button'); down.setAttribute('aria-label', `Descendre l’élément ${index + 1}`); down.disabled = index === items.length - 1;
+    const up = button('Monter', () => move(-1), 'icon-button'); up.setAttribute('aria-label', `Monter l’élément ${index + 1}`); up.disabled = index === 0;
+    const down = button('Descendre', () => move(1), 'icon-button'); down.setAttribute('aria-label', `Descendre l’élément ${index + 1}`); down.disabled = index === items.length - 1;
     const remove = button('Supprimer', () => { if (confirm('Supprimer cet élément du brouillon ? Le contenu actuel restera dans l’historique après enregistrement.')) { items.splice(index, 1); markDirty(); render(); } }, 'icon-button');
     actions.append(up, down, remove); top.append(actions); card.append(top);
-    for (const [key, label, opts] of listFields[section]) field(card, label, item[key], value => { item[key] = value; }, opts);
+    for (const [key, label, opts] of listFields[section]) field(card, label, item[key], value => {
+      if (['category', 'datePublished', 'dateModified'].includes(key) && !value.trim()) delete item[key];
+      else item[key] = value;
+    }, opts);
+    if (['services', 'posts'].includes(section)) sourceFields(card, item);
+    if (section === 'posts') field(card, 'Soins associés à l’article', Array.isArray(item.relatedServices) ? item.relatedServices.join(', ') : item.relatedServices === undefined ? '' : JSON.stringify(item.relatedServices), value => {
+      item.relatedServices = [...new Set(value.split(/[,\s]+/).filter(Boolean))];
+    }, { help: `Facultatif. Slugs séparés par des virgules. Soins disponibles : ${state.content.services.map(service => service.slug).join(', ')}.` });
     container.append(card);
   });
   container.append(button(section === 'services' ? '+ Ajouter un soin' : section === 'posts' ? '+ Ajouter un article' : section === 'pages' ? '+ Ajouter une page' : '+ Ajouter une question', () => {
     const limit = section === 'pages' ? 3 : 100;
     if (items.length >= limit) return message(`La limite de ${limit} éléments est atteinte.`, true);
     const item = Object.fromEntries(listFields[section].map(([key]) => [key, '']));
+    if (['services', 'posts'].includes(section)) item.sources = [];
+    if (section === 'posts') { item.category = 'Conseils pratiques'; item.relatedServices = []; delete item.datePublished; delete item.dateModified; }
     if (section === 'pages') {
       const available = listFields.pages[0][2].choices.find(([slug]) => !items.some(page => page.slug === slug));
       if (!available) return message('Les trois pages sont déjà présentes.', true);
@@ -118,7 +149,7 @@ function renderPublish(container) {
   for (const [title, description] of [['Enregistrer vos contenus', 'L’enregistrement valide les champs et crée une copie de la version précédente dans .local/history/.'], ['Générer puis vérifier la preview', 'Le générateur actualise dist/. Ouvrez le site local et contrôlez les textes, liens, coordonnées et parcours mobile.'], ['Publier depuis le projet', 'Après vérification, publiez les fichiers autorisés avec Git. Le workflow GitHub Pages reconstruit le site. Le bouton de génération ci-dessous ne publie rien sur Internet.']]) { const li = element('li'); li.append(element('strong', title), element('p', description)); steps.append(li); }
   card.append(steps);
   const toolbar = element('div', undefined, 'toolbar');
-  const build = button('Générer la preview ↗', async () => {
+  const build = button('Générer la preview', async () => {
     if (state.dirty) return message('Enregistrez vos modifications avant de générer la preview.', true);
     build.disabled = true; message('Génération du site en cours…');
     try { const result = await api('/api/build', { method: 'POST', body: '{}' }); message(result.message); }
@@ -183,7 +214,7 @@ $('#login-form').addEventListener('submit', async event => {
 });
 $('#save').addEventListener('click', async () => {
   if (state.busy) return;
-  try { commitRaw(); setBusy(true); const result = await api('/api/content', { method: 'PUT', body: JSON.stringify({ content: state.content, revision: state.revision }) }); applyContent(result); render(); message('Contenus enregistrés et version précédente sauvegardée. Générez la preview dans « Export & publication ».'); }
+  try { for (const input of $('#editor').querySelectorAll('input, textarea, select')) if (!input.checkValidity()) { input.reportValidity(); throw new Error(input.validationMessage || 'Corrigez le champ indiqué avant d’enregistrer.'); } commitRaw(); setBusy(true); const result = await api('/api/content', { method: 'PUT', body: JSON.stringify({ content: state.content, revision: state.revision }) }); applyContent(result); render(); message('Contenus enregistrés et version précédente sauvegardée. Générez la preview dans « Export & publication ».'); }
   catch (error) { message(error.message, true); } finally { setBusy(false); }
 });
 $('#logout').addEventListener('click', async () => {

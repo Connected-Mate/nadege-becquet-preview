@@ -1,0 +1,84 @@
+{
+  "verifiedAt": "2026-10-11",
+  "scope": "Préparation SEO local et compréhension des contenus par les moteurs de recherche et de réponse. La version GitHub Pages reste une démonstration publique noindex.",
+  "positioning": {
+    "primaryIntent": "Comprendre les soins réellement présentés par Nadège Becquet à Fontainebleau et la contacter pour un rendez-vous.",
+    "localTopics": ["facialiste Fontainebleau", "massage du visage Fontainebleau", "Kobido Fontainebleau", "Gua Sha visage Fontainebleau", "stretching facial Fontainebleau", "préparer un rendez-vous chez une facialiste"],
+    "boundary": "Ces thèmes guident les pages utiles, sans volume de recherche inventé, classement promis, accumulation artificielle de communes ni création de prestations non confirmées."
+  },
+  "implemented": [
+    "Titres, descriptions et URL canoniques propres à chaque route ; contrôle automatisé de leur unicité et cohérence.",
+    "Open Graph avec URL et type cohérents ; aucune photographie, note, durée, offre, prix, coordonnée géographique ou plage horaire inventés dans le balisage.",
+    "Portrait de partage officiel configuré par media.shareImage uniquement lorsque photosAuthorized vaut true : URL locale assets/ contrôlée, dimensions et texte alternatif. L’image est rattachée à l’établissement, sans être attribuée comme illustration particulière d’un article.",
+    "Graph JSON-LD lié par identifiants stables : BeautySalon, WebSite, WebPage, BreadcrumbList, Service sur chaque soin et BlogPosting sur chaque article.",
+    "Nom, adresse et téléphone structurés dérivés du même fichier de contenu que les informations publiques du site.",
+    "Auteur du blog : Rédaction de la démonstration, en tant qu’Organization éditoriale. Nadège n’est pas automatiquement présentée comme autrice ou validatrice.",
+    "Dates d’articles uniquement lorsqu’elles sont fournies dans les contenus et valides ; aucune date du build présentée comme date de publication.",
+    "FAQPage uniquement sur la page FAQ, avec les questions et réponses exactes présentes à l’écran. Ce balisage ne promet aucun résultat enrichi.",
+    "JSON-LD protégé contre la fermeture malveillante d’une balise script ; métadonnées échappées et routes confinées à la racine du site."
+  ],
+  "editorialStrategy": [
+    "Répondre immédiatement à une question réelle, puis développer avec des sous-titres explicites, exemples utiles et liens internes pertinents.",
+    "Relier les articles aux soins cités et à la préparation du rendez-vous ; éviter de transformer tous les liens en appels commerciaux identiques.",
+    "Présenter les sources documentaires et les limites de chaque information ; distinguer repère général, modalité confirmée du cabinet et conseil individuel.",
+    "Ne pas ajouter de bénéfice médical, résultat garanti, diplôme, tarif, avis ou indication d’accès sans preuve adaptée.",
+    "Conserver une signature éditoriale et des dates honnêtes. Faire relire les articles par Nadège avant toute attribution professionnelle."
+  ],
+  "demoRules": [
+    "Le module createSeo refuse isDemo:false : aucun bouton ou variable ne retire accidentellement noindex.",
+    "robots.txt laisse l’exploration possible afin que les robots puissent lire noindex ; cela ne rend pas la démo privée.",
+    "Aucun sitemap n’est annoncé dans robots.txt ni soumis aux moteurs pour cette démo.",
+    "Pas de soumission Search Console, demande d’indexation ou modification de fiche Google réalisée pendant cette préparation.",
+    "Une page noindex n’est pas préparée pour apparaître dans les réponses Google AI de recherche tant que la démonstration reste dans cet état."
+  ],
+  "officialLaunchSteps": [
+    "Obtenir la validation des coordonnées, prestations, textes, auteur réel, photos et droits, accès, horaires et éléments légaux manquants.",
+    "Confirmer le domaine officiel et la fiche établissement Google authentique ; établir la cohérence du nom, adresse et téléphone sans modifier les comptes sans mandat.",
+    "Préparer une configuration de production distincte, revue explicitement : domaine, URL canoniques, liens internes, identifiants d’entités, mentions de démo et indexation.",
+    "Déployer puis tester les URL réelles, redirections, réponses 404, mobile, performance, accessibilité et balisage des pages finales.",
+    "Créer alors un sitemap des seules URL canoniques indexables, vérifier Search Console et soumettre ce sitemap avec l’autorisation du propriétaire.",
+    "Suivre ensuite la qualité des demandes et les performances de recherche ; ajuster le contenu d’après les questions réelles, sans garantie de position ou de citation par une IA."
+  ],
+  "limitations": [
+    "Des données structurées valides ne prouvent pas la véracité de l’information et ne garantissent ni indexation, ni classement, ni réponse enrichie.",
+    "Les contrôles locaux sont automatisés et ne remplacent pas la relecture du cabinet ni la vérification de la configuration réellement publiée.",
+    "Le travail GEO consiste ici à rendre le contenu lisible, explicite, relié et sourcé. Aucune promesse de présence dans les réponses génératives n’est faite."
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central — AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "finding": "Google indique qu’aucune optimisation spéciale ni balise spécifique aux réponses AI n’est nécessaire. Le contenu accessible, les liens internes et la concordance des données structurées avec le texte restent pertinents. L’éligibilité demande une page indexée ; la présence n’est jamais garantie."
+    },
+    {
+      "title": "Google Search Central — Article structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/article",
+      "finding": "BlogPosting peut expliciter l’article, ses dates et son auteur. L’auteur peut être une personne ou une organisation, avec une attribution cohérente avec la page visible."
+    },
+    {
+      "title": "Google Search Central — Local Business structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+      "finding": "L’entité locale est décrite à partir de son nom, de son adresse et de ses coordonnées réelles. Les propriétés d’exemple de la documentation ne constituent pas des faits à ajouter à ce cabinet."
+    },
+    {
+      "title": "Google Search Central — Documentation updates, FAQ deprecation",
+      "url": "https://developers.google.com/search/updates",
+      "finding": "L’annonce du 8 mai 2026 indique que les résultats enrichis FAQ ne s’affichent plus depuis le 7 mai 2026. La documentation dédiée a ensuite été retirée. FAQPage est conservé ici uniquement comme description sémantique fidèle."
+    },
+    {
+      "title": "Google Search Central — Block Search indexing with noindex",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/block-indexing",
+      "finding": "La page doit rester accessible à l’exploration pour que Google puisse lire la directive noindex. Une interdiction complète dans robots.txt empêcherait cette lecture."
+    },
+    {
+      "title": "Google Search Central — Breadcrumb structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb",
+      "finding": "Le fil d’Ariane décrit une progression logique dans le site. Les pages de soins et d’articles reprennent leur rubrique parente et leur URL finale."
+    }
+  ],
+  "validation": {
+    "moduleTests": "node --test tests/seo.test.mjs",
+    "renderedExport": "npm run build && npm run check",
+    "coverage": ["noindex sans bascule automatique", "URL GitHub Pages avec sous-dossier", "données locales exactes", "attribution éditoriale", "dates non inventées", "FAQ visible", "balises protégées contre XSS", "réunification de plusieurs scripts JSON-LD"]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-10-11",
+  "rights": {
+    "status": "confirmed_by_user",
+    "scope": "L’utilisateur a confirmé disposer des droits sur toutes les photos du business pour cette refonte.",
+    "note": "Aucune image générée par IA. Fichiers téléchargés intacts, sans recadrage, retouche ni agrandissement."
+  },
+  "assets": [
+    {
+      "id": "nadege-portrait-noir-blanc",
+      "file": "public/assets/photo-nadege-portrait-noir-blanc.jpg",
+      "sourcePage": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge",
+      "sourceImage": "https://static.wixstatic.com/media/e5f26a_ba6d8773dc0d4c12bc65fa1483633b36~mv2.jpg",
+      "publishedImage": "https://static.wixstatic.com/media/e5f26a_ba6d8773dc0d4c12bc65fa1483633b36~mv2.jpg/v1/fill/w_244,h_245,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 141952,
+      "sha256": "034162222d4af2dee1b7a955d462c7b13ba735460fa78e1f627ef714fd1bd990",
+      "nature": "Portrait photographique en noir et blanc publié sur la fiche nominative de Nadège Becquet, École du Kobido.",
+      "visualCheck": "Inspecté avec view_image : portrait de femme portant des lunettes rondes et une tenue sombre. Le contexte de la fiche officielle et son texte alternatif BECQUET attribuent le portrait à Nadège.",
+      "recommendedUse": "Portrait sur la page de présentation ; peut remplacer le recadrage de capture pour un rendu plus net. Image carrée originale 1080×1080.",
+      "availability": "downloaded_verified",
+      "limitations": "Portrait différent du sourire au foulard rouge de la capture ; ne pas présenter ces deux fichiers comme la même séance photo."
+    },
+    {
+      "id": "user-instagram-reference",
+      "file": "public/assets/reference-nadege.jpg",
+      "sourcePage": "https://www.instagram.com/nadegebecquet.facialiste/",
+      "sourceImage": null,
+      "width": 589,
+      "height": 1280,
+      "nature": "Capture Instagram fournie par l’utilisateur : portrait souriant au foulard rouge, outil Gua Sha, décor floral et autres vignettes.",
+      "availability": "existing_user_attachment_root_controls_public_copy",
+      "recommendedUse": "Référence couleur et recadrages CSS déjà présents, droits confirmés par l’utilisateur.",
+      "limitations": "Source basse définition. Aucun original HD du portrait souriant, de l’outil ou du cabinet découvert dans les sources accessibles."
+    }
+  ],
+  "examinedSources": [
+    {
+      "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html",
+      "availability": "read",
+      "result": "Pas de portrait ou photo du cabinet de Nadège identifiable. Image de massage principale inspectée mais exclue comme photographie documentaire du cabinet."
+    },
+    {
+      "url": "https://pole-sante-sport-fontainebleau.fr/wpimages/wped15c26f_06.png",
+      "availability": "downloaded_to_temporary_directory_for_visual_check_only",
+      "width": 1345,
+      "height": 793,
+      "nature": "Photo de massage facial placée en fond de la page existante ; praticienne non visible et lieu non identifiable.",
+      "decision": "not_imported",
+      "reason": "Impossible de confirmer qu’il s’agit de Nadège, de son cabinet ou d’une séance réalisée par elle. Ne pas la présenter comme une réalisation."
+    },
+    {
+      "url": "https://www.fresha.com/fr/lvp/nadege-becquet-facialiste-certifiee-authentique-kobido-r-rue-grande-bxNK4X",
+      "availability": "read",
+      "result": "Les deux images du business renvoient à une même image générique de remplacement. Les photos des établissements voisins sont exclues."
+    },
+    {
+      "url": "https://images.fresha.com/lead-images/placeholders/aesthetics-21.jpg?class=venue-gallery-large",
+      "availability": "explicit_placeholder_url",
+      "nature": "Image de remplacement Fresha.",
+      "decision": "not_imported",
+      "reason": "N’est pas une photographie propre à Nadège Becquet."
+    },
+    {
+      "url": "https://actu.fr/ile-de-france/fontainebleau_77186/a-fontainebleau-nadege-becquet-prend-soin-de-votre-visage_59750151.html",
+      "availability": "unavailable_http_403",
+      "result": "Accès refusé lors de la requête HTTP normale. Aucun contournement, aucune image extraite."
+    },
+    {
+      "url": "https://www.instagram.com/nadegebecquet.facialiste/",
+      "availability": "unavailable_in_web_tool",
+      "result": "Aucun original de publication récupéré ; utilisation limitée à la capture fournie."
+    },
+    {
+      "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge",
+      "availability": "read",
+      "result": "Portrait nominatif trouvé ; téléchargement de l’original public Wix dont la variante affichée est explicitement présente dans le HTML."
+    }
+  ],
+  "summary": "Un nouveau portrait 1080×1080 utilisable, aucun original HD sûr du sourire au foulard rouge ni de l’univers du cabinet. Préserver la capture fournie pour ces détails."
+}

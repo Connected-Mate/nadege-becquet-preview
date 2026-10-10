@@ -26,7 +26,7 @@
       "url": "https://www.instagram.com/nadegebecquet.facialiste/",
       "status": "screenshot_read_live_profile_not_verified",
       "checkedAt": "2026-10-11",
-      "note": "La capture n'est pas datée. Elle ne vaut pas autorisation de republication de toutes les images visibles."
+      "note": "La capture n'est pas datée. L’utilisateur a depuis confirmé les droits d’utilisation des photographies pour cette refonte le 11 octobre 2026. Les fichiers utilisés sont répertoriés dans research/assets.json."
     },
     {
       "id": "fresha",
@@ -99,6 +99,14 @@
       "title": "Date de retrait de la démonstration",
       "status": "confirmed",
       "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "user-photo-rights",
+      "type": "user_instruction",
+      "title": "Autorisation de réutilisation des photographies pour cette refonte",
+      "status": "confirmed",
+      "checkedAt": "2026-10-11",
+      "note": "Droits confirmés explicitement par l’utilisateur ; portrait HD de la fiche École du Kobido et capture fournie utilisés dans la démo publique."
     }
   ],
   "facts": [
@@ -240,6 +248,15 @@
         "user"
       ],
       "note": "Utilisateur : « Ça doit être retiré dans un mois », le 11 octobre 2026. Échéance interprétée au 11 novembre 2026."
+    },
+    {
+      "field": "photo_rights",
+      "value": "Photographies autorisées pour ce projet de refonte.",
+      "status": "confirmed_by_user",
+      "sources": [
+        "user-photo-rights"
+      ],
+      "note": "Portrait noir et blanc HD et capture Instagram publiés ; les détails de la capture sont cadrés par CSS. La recherche de sources HD supplémentaires reste une amélioration de qualité, pas une nouvelle demande de droits pour les images déjà autorisées."
     }
   ],
   "contradictions": [
@@ -295,10 +312,10 @@
   ],
   "gaps": [
     {
-      "priority": "launch",
-      "field": "copyright",
-      "question": "Fournir logo original, photographies haute définition et confirmation des droits web.",
-      "decision": "Les fichiers publics et images de presse ne sont pas libres de droits. La capture Instagram est une référence, pas une photothèque exploitable sans limite."
+      "priority": "improvement",
+      "field": "additional_hd_assets",
+      "question": "Des originaux HD supplémentaires du portrait souriant, des gestes ou du cabinet peuvent améliorer la galerie. Un logo officiel peut également compléter la signature proposée.",
+      "decision": "Les droits des images actuellement utilisées sont confirmés. Ne pas présenter une nouvelle autorisation comme nécessaire pour continuer leur utilisation dans ce projet."
     },
     {
       "priority": "launch",
@@ -386,8 +403,8 @@
   ],
   "recommendations": {
     "positioning": "Proposition éditoriale : une adresse personnelle de massage du visage à Fontainebleau, avec le nom de Nadège, le geste et un contact direct au premier plan.",
-    "primaryAction": "Prendre rendez-vous par téléphone ; hypothèse basée sur les modalités publiques existantes, à valider par l'entreprise.",
-    "structuredData": "LocalBusiness ou BeautySalon avec nom, téléphone et adresse vérifiés ; pas de note, prix, horaires précis ou équipe non validés. Fournir la source École du Kobido dans la page de présentation.",
+    "primaryAction": "Réservation exclusivement par téléphone pour cette version, selon le choix de l’utilisateur. Copie du numéro et itinéraires disponibles pour faciliter le contact et la venue.",
+    "structuredData": "Graph BeautySalon, WebSite, WebPage, BreadcrumbList, Service et BlogPosting ; adresse et téléphone cohérents, portrait de partage autorisé, auteur du journal distinct : Rédaction de la démonstration. Pas de note, prix, horaires précis ou équipe non validés.",
     "localSEO": "Pages distinctes pour les quatre pratiques documentées, titres uniques incluant Fontainebleau quand utile, liens internes vers contact et accès ; pas de multiplication de pages de communes sans contenu spécifique.",
     "demo": "Preview publique, noindex et popup explicative. Le noindex n'est ni un contrôle d'accès ni une garantie de confidentialité."
   }

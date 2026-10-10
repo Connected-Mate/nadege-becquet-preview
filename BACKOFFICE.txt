@@ -1,7 +1,7 @@
 ADMINISTRATION LOCALE — NADÈGE BECQUET
 
 PRÉREQUIS
-Node.js 20 ou plus récent. Aucune dépendance serveur externe.
+Node.js 22 ou plus récent. Aucune dépendance serveur externe.
 Depuis le dossier du projet :
   npm run build
   npm run start
@@ -31,7 +31,8 @@ Internet ou derrière un proxy public. Redémarrer invalide les sessions
 et remet à zéro les compteurs de tentative conservés en mémoire.
 
 Les champs connus du contenu sont validés : types, tailles, unicité et
-format des adresses de pages, dates réelles. Les clés complémentaires
+format des adresses de pages, dates réelles, sources HTTP(S), références
+aux soins existants et paramètres d’image de partage. Les clés complémentaires
 restent intactes. Aucun texte n’est exécuté comme HTML par l’admin.
 L’éditeur JSON permet de modifier l’intégralité du contenu ; il requiert
 de conserver le schéma. Aucun avis, titre professionnel, tarif ou
@@ -41,6 +42,48 @@ Il peut contenir au maximum trois pages aux adresses uniques :
 mentions-legales, confidentialite et sources. Chaque page comprend
 slug, title, description et body ; le corps utilise du texte simple,
 avec des paragraphes séparés par une ligne vide et des URL en texte.
+
+ARTICLES ET SOURCES
+La rubrique Le journal édite directement titre, adresse, introduction,
+texte, catégorie, date de publication, date de mise à jour, sources et
+soins associés. Le texte accepte un Markdown simple : sous-titres ##,
+paragraphes séparés par une ligne vide, listes avec - et liens
+[texte](https://adresse). Aucun HTML n’est nécessaire.
+
+Une nouvelle fiche a la catégorie « Conseils pratiques », sans source,
+sans soin associé et sans date automatique. Les dates sont facultatives,
+au format AAAA-MM-JJ ; la mise à jour ne peut pas précéder la publication.
+Renseignez uniquement les dates réelles. Effacer un champ de date le retire.
+La signature publique est « Rédaction de la démonstration » ; modifier
+un article ne lui attribue pas automatiquement Nadège comme autrice.
+
+Sources : une ligne par référence, au format
+  Titre de la source | https://exemple.fr/page
+Un titre non vide et une URL HTTP(S) sans identifiants sont exigés.
+La rubrique Les soins propose également ce champ de sources.
+Soins associés : indiquez les slugs existants, séparés par des virgules.
+La liste des slugs disponibles figure sous le champ. Si un soin est retiré,
+retirez aussi ses références dans les articles avant d’enregistrer.
+
+Les champs category, datePublished, dateModified, sources et relatedServices
+sont conservés lors des modifications, de l’export JSON et des sauvegardes.
+L’éditeur « Tous les contenus » donne accès aux champs complémentaires,
+notamment business.sameAs et media.shareImage. sameAs contient une liste
+d’URL HTTP(S) identifiant réellement l’entreprise, pas une liste de sources.
+Les valeurs inconnues de l’interface sont conservées ; les champs connus
+malformés sont refusés avec un message explicatif avant l’enregistrement.
+
+PHOTOS ET PARTAGE
+Les droits des photographies utilisées ont été confirmés par l’utilisateur.
+media.photosAuthorized vaut true. L’image de partage est définie dans
+media.shareImage par path, width, height et alt. Le chemin doit viser un
+fichier JPG, PNG ou WebP sous assets/, sans traversée de répertoire ; les
+dimensions sont des entiers positifs et le texte alternatif est obligatoire.
+Les fichiers se placent dans public/assets/ et doivent être présents dans
+le dépôt. L’administration ne propose pas de téléversement d’image.
+Les validations du JSON contrôlent leur format ; npm run check vérifie
+ensuite la présence de l’image dans l’export. Des originaux HD supplémentaires
+peuvent améliorer la galerie sans remettre en attente les droits déjà confirmés.
 
 ENREGISTREMENT ET HISTORIQUE
 Les modifications sont enregistrées dans data/content.json par
@@ -67,6 +110,7 @@ Le site statique est reconstruit dans dist/, puis visible à l’adresse
 locale. La génération ne publie rien sur Internet.
 Après validation visuelle, depuis le terminal du dépôt configuré :
   npm run build
+  npm run check
   git add data/content.json
   git commit -m "Mise à jour des contenus"
   git push
@@ -86,4 +130,5 @@ VÉRIFICATIONS
   node --test tests/admin.test.mjs
 Ces tests vérifient : authentification, cookie, origine, CSRF, hôte,
 validation, conflit de révision, copie, restauration, export, expiration,
-limitation des tentatives et confinement des fichiers servis.
+limitation des tentatives, confinement des fichiers servis et conservation
+des métadonnées éditoriales. Les contenus malformés sont rejetés en HTTP 422.

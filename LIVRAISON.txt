@@ -19,30 +19,46 @@ La console indique les URL. Le serveur écoute uniquement 127.0.0.1.
 Si le port est occupé, arrêter l’instance précédente avant de relancer.
 
 CONTENU ET CONCEPTION
-17 pages et une 404 : accueil, catalogue, quatre soins, présentation,
-galerie, FAQ, journal, trois articles, contact, sources, mentions et confidentialité.
+20 pages et une 404 : accueil, catalogue, quatre soins, présentation,
+galerie, FAQ, journal, six articles, contact, sources, mentions et confidentialité.
 La recherche documentaire et l’étude de trois concurrents sont dans research/.
-Direction proposée : crème, bordeaux, Cormorant Garamond, traits fins.
+Direction proposée : crème, bordeaux, Manrope et Cormorant Garamond,
+photographies réelles, composition sobre et adaptée au mobile.
 La signature typographique est une proposition, aucun logo officiel n’était fourni.
-Objectif retenu : appel pour rendez-vous, conformément aux sources publiques.
-Fresha n’est pas présenté comme un agenda de réservation.
+Réservation exclusivement par téléphone ; le contact propose aussi la copie
+du numéro. Adresse, Google Maps à la demande, itinéraires Google Maps,
+Waze, Apple Plans et QR code facilitent la venue. Aucun créneau n’est
+confirmé en ligne et Fresha n’est pas présenté comme un agenda.
 
 PHOTOGRAPHIES
-Les droits ont été demandés, sans confirmation reçue à la livraison.
-La démo publique utilise donc les illustrations originales.
-La capture Instagram et les aperçus restent locaux dans .local/.
-Pour reconstruire la maquette locale avec le portrait de référence :
-  LOCAL_REFERENCE_PHOTOS=1 npm run build
-Ce mode ne doit pas être utilisé pour un export public avant autorisation.
-Après confirmation des droits, copier la référence autorisée dans
-public/assets/reference-nadege.jpg et mettre media.photosAuthorized à true
-dans data/content.json. Préférer ensuite les photographies originales HD
-et adapter les recadrages CSS, conçus pour la capture actuellement fournie.
+L’utilisateur a confirmé les droits d’utilisation des photographies pour
+ce projet le 11 octobre 2026. Les images sont incluses dans la démo publique.
+Le portrait noir et blanc 1080 × 1080 provient de la fiche nominative de
+l’École du Kobido. La capture Instagram fournie est conservée intacte ;
+ses détails sont cadrés par CSS. Les références figurent dans research/assets.json.
+Des originaux HD supplémentaires du portrait souriant, des gestes ou du
+cabinet pourraient améliorer la galerie. Leur absence ne remet pas en
+attente l’autorisation déjà donnée pour les images utilisées.
+media.photosAuthorized vaut true. media.shareImage désigne le portrait HD,
+ses dimensions et son texte alternatif pour le partage Open Graph.
+
+RÉFÉRENCEMENT ET JOURNAL
+Chaque page dispose d’un titre et d’une description uniques, d’une URL
+canonique et de métadonnées de partage. Le graph JSON-LD relie l’établissement,
+le site, les pages, les fils d’Ariane, les soins et les articles. Les coordonnées
+sont issues du fichier de contenu commun, sans avis, prix ou horaires inventés.
+Les six articles ont une catégorie, des sources et des liens vers les soins
+concernés. Leur auteur affiché est « Rédaction de la démonstration » ; ils ne
+sont pas automatiquement attribués à Nadège. Les dates viennent des contenus.
+La stratégie et ses sources Google sont dans research/seo-notes.json.
+Ces préparations ne garantissent ni classement ni citation par un moteur de réponse.
 
 ÉDITION ET PUBLICATION
 1. Se connecter au back-office local.
 2. Modifier l’accueil, les coordonnées, les soins, la présentation, la FAQ,
-   les articles ou les pages légales. Enregistrer.
+   les articles ou les pages légales. Les articles disposent de champs pour
+   catégorie, dates, sources « Titre | URL » et slugs des soins associés.
+   Enregistrer ; les informations malformées sont refusées.
 3. Dans Export & publication, générer la preview puis la relire.
 4. Marquer la version relue comme validée (validation locale horodatée).
 5. Dans le terminal :
@@ -84,12 +100,15 @@ Retrait manuel de secours, depuis le projet, à la date convenue :
   gh workflow disable pages.yml --repo Connected-Mate/nadege-becquet-preview
   gh api --method DELETE repos/Connected-Mate/nadege-becquet-preview/pages
 La suppression du site n’efface ni les captures/cache de tiers ni le dépôt.
-Si la date change, modifier data.demo.removalDate ET le suivi Codex.
+Si la date change, modifier demo.removalDate dans data/content.json
+ET le suivi Codex.
 
 AVANT LANCEMENT OFFICIEL
 - Faire valider les textes, prestations et certifications par Nadège.
 - Confirmer horaires, durées, tarifs, modalités et conditions d’annulation.
-- Fournir logo, photos HD et autorisations d’utilisation.
+- Valider la signature visuelle proposée ; un logo officiel et des photos HD
+  supplémentaires peuvent compléter le site si disponibles. Les droits des
+  photographies utilisées ont déjà été confirmés.
 - Confirmer l’identité éditrice, contact email, SIRET, responsable de publication,
   médiateur et mentions adaptées à la situation juridique exacte.
 - Confirmer la fiche Google, accès, étage, stationnement et accessibilité.
@@ -98,8 +117,8 @@ AVANT LANCEMENT OFFICIEL
   uniquement après décision explicite de lancement.
 - Générer alors sitemap.xml, relier Search Console et harmoniser les coordonnées
   avec les fiches publiques. Les sources factuelles restent consultables.
-- Si réservation en ligne/formulaire demandé, sélectionner et configurer le vrai
-  service, sa sécurité, les informations personnelles et le traitement des demandes.
+La réservation reste téléphonique. Un agenda ou formulaire ne fait pas partie
+de cette livraison et demanderait un choix fonctionnel distinct.
 Aucun agenda, tarif, avis client, résultat garanti ou diplôme supplémentaire n’a été inventé.
 
 CONTRÔLES
