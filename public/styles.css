@@ -7,3 +7,4 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media(max-width:600px){dialog{padding-top:58px}}
 .prose a{overflow-wrap:anywhere}.portrait-illustration{display:flex;align-items:center;justify-content:center;background:#e5d7ce;color:#6c4447;padding:15%;min-height:320px}.portrait-illustration .line-art{width:100%;height:100%;transform:scale(1.2)}.hero-image>.portrait-illustration{min-height:0}.portrait-illustration:after{content:'LE VISAGE · LE GESTE';position:absolute;top:14%;font-size:8px;letter-spacing:3px}.flowers-crop img{width:347%;top:-470%}
+@media(max-width:360px){.page-heading h1{font-size:43px;letter-spacing:-1.4px}}

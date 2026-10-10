@@ -92,6 +92,16 @@ try {
       check(`${label}: aucun débordement horizontal ${pathname}`, overflow.scrollWidth <= width + 1, overflow);
       check(`${label}: un titre principal ${pathname}`, await page.locator('h1').count() === 1);
       check(`${label}: noindex ${pathname}`, (await page.locator('meta[name=robots]').getAttribute('content'))?.includes('noindex'));
+      if (pathname === '/') {
+        const hero = await page.locator('.hero-image .portrait').boundingBox();
+        check(`${label}: visuel principal conserve sa hauteur`, hero?.height >= 240 && hero?.width >= 200, { hero });
+      }
+      if (pathname === '/galerie/') {
+        const visuals = await page.locator('.gallery figure').evaluateAll(els => els.map(el => { const r=el.getBoundingClientRect(); return {width:r.width,height:r.height}; }));
+        check(`${label}: trois visuels de galerie lisibles`, visuals.length === 3 && visuals.every(r => r.width >= 200 && r.height >= 200), { visuals });
+        await page.screenshot({ path:`artifacts/${label}-gallery.png`, fullPage:true });
+        report.screenshots.push(`artifacts/${label}-gallery.png`);
+      }
       if (label === 'desktop' || pathname === '/' || pathname === '/contact/') {
         const axe = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
         report.accessibility.push({ viewport: label, pathname, violations: axe.violations.map(v => ({ id:v.id, impact:v.impact, description:v.description, helpUrl:v.helpUrl, nodes:v.nodes.map(n => ({ target:n.target, failureSummary:n.failureSummary })) })) });
