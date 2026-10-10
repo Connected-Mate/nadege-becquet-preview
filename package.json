@@ -1,0 +1,14 @@
+{
+  "name": "nadege-becquet-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": { "qrcode": "1.5.4" },
+  "devDependencies": { "@playwright/test": "1.56.1", "@axe-core/playwright": "4.10.2" }
+}

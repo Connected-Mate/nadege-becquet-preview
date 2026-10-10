@@ -1,0 +1,108 @@
+NADÈGE BECQUET — PROPOSITION DE SITE
+Livraison du 11 octobre 2026
+
+ACCÈS
+Démo publique : https://connected-mate.github.io/nadege-becquet-preview/
+Sources : https://github.com/Connected-Mate/nadege-becquet-preview
+Site local : http://127.0.0.1:4173/
+Back-office local : http://127.0.0.1:4173/admin/
+Aide locale : http://127.0.0.1:4173/admin/aide.html
+Mot de passe : .local/admin-access.txt, uniquement sur cet ordinateur.
+Le mot de passe n’est pas dans le dépôt ni dans l’archive de livraison.
+
+DÉMARRER
+Node.js 22 ou ultérieur. Dans le dossier du projet :
+  npm ci
+  npm run build
+  npm start
+La console indique les URL. Le serveur écoute uniquement 127.0.0.1.
+Si le port est occupé, arrêter l’instance précédente avant de relancer.
+
+CONTENU ET CONCEPTION
+17 pages et une 404 : accueil, catalogue, quatre soins, présentation,
+galerie, FAQ, journal, trois articles, contact, sources, mentions et confidentialité.
+La recherche documentaire et l’étude de trois concurrents sont dans research/.
+Direction proposée : crème, bordeaux, Cormorant Garamond, traits fins.
+La signature typographique est une proposition, aucun logo officiel n’était fourni.
+Objectif retenu : appel pour rendez-vous, conformément aux sources publiques.
+Fresha n’est pas présenté comme un agenda de réservation.
+
+PHOTOGRAPHIES
+Les droits ont été demandés, sans confirmation reçue à la livraison.
+La démo publique utilise donc les illustrations originales.
+La capture Instagram et les aperçus restent locaux dans .local/.
+Pour reconstruire la maquette locale avec le portrait de référence :
+  LOCAL_REFERENCE_PHOTOS=1 npm run build
+Ce mode ne doit pas être utilisé pour un export public avant autorisation.
+Après confirmation des droits, copier la référence autorisée dans
+public/assets/reference-nadege.jpg et mettre media.photosAuthorized à true
+dans data/content.json. Préférer ensuite les photographies originales HD
+et adapter les recadrages CSS, conçus pour la capture actuellement fournie.
+
+ÉDITION ET PUBLICATION
+1. Se connecter au back-office local.
+2. Modifier l’accueil, les coordonnées, les soins, la présentation, la FAQ,
+   les articles ou les pages légales. Enregistrer.
+3. Dans Export & publication, générer la preview puis la relire.
+4. Marquer la version relue comme validée (validation locale horodatée).
+5. Dans le terminal :
+     npm test
+     npm run build
+     npm run check
+     git add data/content.json
+     git commit -m "Mise à jour des contenus"
+     git push
+6. Vérifier le succès de Publish public demo dans GitHub Actions.
+Le bouton local de génération ne publie pas sur Internet.
+L’administration ne fonctionne pas sur GitHub Pages : cet hébergeur sert
+uniquement des fichiers statiques. Ne jamais y copier admin/, server.mjs ou .local/.
+
+SAUVEGARDES
+Chaque enregistrement/restauration conserve la version précédente dans
+.local/history/. L’interface permet une restauration avec contrôle de version.
+La relecture et les changements ont une trace locale. Git conserve les versions
+publiées. Export JSON disponible ; copier régulièrement ce fichier et une sauvegarde
+chiffrée de .local/ sur un support distinct pour résister à une perte de l’ordinateur.
+Ces copies externes ne sont pas configurées automatiquement.
+
+DÉMO PUBLIQUE ET RETRAIT
+Date demandée : 11 novembre 2026, Europe/Paris.
+Noindex/nofollow/noarchive sur chaque page ; popup expliquant le statut public.
+robots.txt permet de lire le noindex. Aucun sitemap soumis ni indexation demandée.
+Noindex n’est pas une protection d’accès ni une garantie de confidentialité.
+
+Trois niveaux de fin de démo :
+- Le JavaScript remplace l’affichage à partir du 11/11 à minuit, heure de Paris.
+- Le workflow GitHub programmé quotidiennement reconstruit un export expiré,
+  sans photos/scripts actifs. Les horaires des jobs GitHub peuvent être retardés.
+- Le suivi Codex « Retirer la démo Nadège Becquet » est programmé le 11/11 à
+  00h15 (heure locale) pour désactiver pages.yml puis supprimer le site Pages.
+  Ce suivi nécessite que l’exécution locale et la connexion GitHub restent disponibles.
+  La réussite future n’est pas encore vérifiable. Le dépôt source sera conservé.
+
+Retrait manuel de secours, depuis le projet, à la date convenue :
+  gh workflow disable pages.yml --repo Connected-Mate/nadege-becquet-preview
+  gh api --method DELETE repos/Connected-Mate/nadege-becquet-preview/pages
+La suppression du site n’efface ni les captures/cache de tiers ni le dépôt.
+Si la date change, modifier data.demo.removalDate ET le suivi Codex.
+
+AVANT LANCEMENT OFFICIEL
+- Faire valider les textes, prestations et certifications par Nadège.
+- Confirmer horaires, durées, tarifs, modalités et conditions d’annulation.
+- Fournir logo, photos HD et autorisations d’utilisation.
+- Confirmer l’identité éditrice, contact email, SIRET, responsable de publication,
+  médiateur et mentions adaptées à la situation juridique exacte.
+- Confirmer la fiche Google, accès, étage, stationnement et accessibilité.
+- Choisir le domaine officiel, configurer HTTPS et les URL canoniques.
+- Retirer popup/noindex/mécanismes d’expiration et désactiver le suivi de retrait
+  uniquement après décision explicite de lancement.
+- Générer alors sitemap.xml, relier Search Console et harmoniser les coordonnées
+  avec les fiches publiques. Les sources factuelles restent consultables.
+- Si réservation en ligne/formulaire demandé, sélectionner et configurer le vrai
+  service, sa sécurité, les informations personnelles et le traitement des demandes.
+Aucun agenda, tarif, avis client, résultat garanti ou diplôme supplémentaire n’a été inventé.
+
+CONTRÔLES
+Les résultats détaillés sont livrés dans CONTROLES.txt et artifacts/.
+Les tests automatiques complètent une revue visuelle ; ils ne constituent pas
+une certification d’accessibilité, une validation juridique ou un test matériel iOS.

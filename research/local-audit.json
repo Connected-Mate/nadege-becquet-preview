@@ -1,0 +1,394 @@
+{
+  "auditDate": "2026-10-11",
+  "business": "Nadège Becquet — Facialiste",
+  "scope": "Audit documentaire du site existant, de la capture Instagram transmise, de sources publiques et de trois concurrents locaux. Aucun contact avec l'entreprise ni réservation effectuée.",
+  "sources": [
+    {
+      "id": "site",
+      "type": "primary",
+      "title": "Page Nadège Becquet du Pôle Santé Sport",
+      "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "kobido",
+      "type": "primary",
+      "title": "Fiche de Nadège Becquet — École du Kobido",
+      "url": "https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "instagram-screenshot",
+      "type": "user_supplied",
+      "title": "Capture du compte nadegebecquet.facialiste fournie par l'utilisateur",
+      "url": "https://www.instagram.com/nadegebecquet.facialiste/",
+      "status": "screenshot_read_live_profile_not_verified",
+      "checkedAt": "2026-10-11",
+      "note": "La capture n'est pas datée. Elle ne vaut pas autorisation de republication de toutes les images visibles."
+    },
+    {
+      "id": "fresha",
+      "type": "directory",
+      "title": "Fiche Fresha",
+      "url": "https://www.fresha.com/fr/lvp/nadege-becquet-facialiste-certifiee-authentique-kobido-r-rue-grande-bxNK4X",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "planity",
+      "type": "directory",
+      "title": "Fiche Planity",
+      "url": "https://www.planity.com/nadege-becquet-77300-fontainebleau",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "pappers",
+      "type": "secondary_company_registry",
+      "title": "BECQUET NADEGE — SIREN 900078684",
+      "url": "https://www.pappers.fr/entreprise/becquet-nadege-900078684",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "actu",
+      "type": "press",
+      "title": "À Fontainebleau, Nadège Becquet prend soin de votre visage",
+      "url": "https://actu.fr/ile-de-france/fontainebleau_77186/a-fontainebleau-nadege-becquet-prend-soin-de-votre-visage_59750151.html",
+      "status": "page_unavailable_to_research_tool",
+      "checkedAt": "2026-10-11",
+      "note": "URL donnée par l'utilisateur. Article non lu : ne pas inventer de citation, date ou contenu."
+    },
+    {
+      "id": "pole",
+      "type": "primary",
+      "title": "Pôle Santé Sport Fontainebleau",
+      "url": "https://pole-sante-sport-fontainebleau.fr/index.html",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "juliette",
+      "type": "competitor_primary",
+      "title": "Juliette Greitzer",
+      "url": "https://www.juliette-reflexologue.fr/",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "loing",
+      "type": "competitor_primary",
+      "title": "Bien-être du Loing",
+      "url": "https://www.bienetreduloing.fr/",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "sublime",
+      "type": "competitor_primary",
+      "title": "La Sublime — Barbizon",
+      "url": "https://www.headspalasublime.com/",
+      "status": "read",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "user",
+      "type": "user_instruction",
+      "title": "Date de retrait de la démonstration",
+      "status": "confirmed",
+      "checkedAt": "2026-10-11"
+    }
+  ],
+  "facts": [
+    {
+      "field": "name",
+      "value": "Nadège Becquet",
+      "status": "verified",
+      "sources": [
+        "site",
+        "kobido"
+      ],
+      "note": "Orthographe Becquet, avec un c : le texte initial utilisateur disait Bequet."
+    },
+    {
+      "field": "activity",
+      "value": "Facialiste, massages du visage",
+      "status": "verified",
+      "sources": [
+        "site",
+        "instagram-screenshot"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "160 rue Grande, 77300 Fontainebleau, France",
+      "status": "verified",
+      "sources": [
+        "site",
+        "kobido",
+        "planity",
+        "instagram-screenshot"
+      ]
+    },
+    {
+      "field": "telephone",
+      "value": "+33683493034",
+      "display": "06 83 49 30 34",
+      "status": "verified",
+      "sources": [
+        "site",
+        "kobido",
+        "planity",
+        "instagram-screenshot"
+      ]
+    },
+    {
+      "field": "booking",
+      "value": "Sur rendez-vous, par téléphone. La capture Instagram indique également les messages privés.",
+      "status": "verified",
+      "sources": [
+        "site",
+        "instagram-screenshot",
+        "fresha"
+      ]
+    },
+    {
+      "field": "services",
+      "value": [
+        "Massage facial détente",
+        "Massage japonais Kobi-do",
+        "Massage Gua Sha",
+        "Stretching facial"
+      ],
+      "status": "verified_as_published_on_existing_site",
+      "sources": [
+        "site"
+      ],
+      "note": "Offre exacte, protocoles, durées et prix actuels à confirmer avec Nadège. N'ajouter aucun geste ni résultat garanti absent des sources."
+    },
+    {
+      "field": "authentic_kobido",
+      "value": "Authentique Kobido®, Expert, Ambassadrice Authentique Kobido®",
+      "status": "verified_in_training_organization_directory",
+      "sources": [
+        "kobido"
+      ],
+      "note": "Éléments publics vérifiables ; ne pas ajouter d'année de certification ni de diplôme d'État."
+    },
+    {
+      "field": "lb_facialiste",
+      "value": "Diplômée de la Méthode LB Facialiste",
+      "status": "self_declared_in_user_screenshot_not_independently_verified",
+      "sources": [
+        "instagram-screenshot"
+      ]
+    },
+    {
+      "field": "odaites",
+      "value": "Soin L’Odaïtès",
+      "status": "mentioned_in_user_screenshot_requires_current_offer_confirmation",
+      "sources": [
+        "instagram-screenshot"
+      ]
+    },
+    {
+      "field": "hours",
+      "value": {
+        "monday_to_friday": "09:00–20:00",
+        "saturday": "09:00–15:00",
+        "sunday": "closed"
+      },
+      "status": "directory_only_requires_owner_confirmation",
+      "sources": [
+        "fresha"
+      ],
+      "safePublicWording": "Sur rendez-vous. Contactez Nadège pour connaître les disponibilités."
+    },
+    {
+      "field": "legal_entity",
+      "value": {
+        "legalName": "BECQUET NADEGE",
+        "form": "Entrepreneur individuel",
+        "siren": "900078684",
+        "siret": "90007868400017",
+        "activityCode": "96.02B"
+      },
+      "status": "secondary_registry_requires_owner_or_official_registry_confirmation",
+      "sources": [
+        "pappers"
+      ],
+      "note": "Le registre officiel n'a pas pu être consulté via l'outil. Ne pas annoncer de régime de TVA à partir d'un numéro automatiquement calculé."
+    },
+    {
+      "field": "team",
+      "value": "Nadège est la seule personne identifiée comme facialiste sur les sources consultées.",
+      "status": "no_additional_team_verified",
+      "sources": [
+        "site",
+        "kobido"
+      ],
+      "note": "Les autres professionnels du pôle ne constituent pas automatiquement son équipe."
+    },
+    {
+      "field": "date_retrait_demo",
+      "value": "2026-11-11",
+      "timezone": "Europe/Paris",
+      "status": "confirmed_by_user_relative_date",
+      "sources": [
+        "user"
+      ],
+      "note": "Utilisateur : « Ça doit être retiré dans un mois », le 11 octobre 2026. Échéance interprétée au 11 novembre 2026."
+    }
+  ],
+  "contradictions": [
+    {
+      "topic": "Adresse du pôle",
+      "observation": "L'en-tête du site du pôle affiche les numéros 143 et 160. La page de Nadège et l'École du Kobido la situent toutes deux au 160.",
+      "decision": "Utiliser exclusivement 160 rue Grande pour Nadège.",
+      "sources": [
+        "site",
+        "pole",
+        "kobido"
+      ]
+    },
+    {
+      "topic": "Prestations Fresha",
+      "observation": "La fiche contient les rubriques microneedling et éclaircissement, sans corroboration dans le site de Nadège ni dans la capture fournie.",
+      "decision": "Ne pas les proposer sur le nouveau site. Demander une carte des prestations actuelle.",
+      "sources": [
+        "fresha",
+        "site"
+      ]
+    },
+    {
+      "topic": "Réservation en ligne",
+      "observation": "Fresha affiche un appel téléphonique, puis des établissements voisins réservables. Planity précise que ce salon n'est pas encore réservable en ligne.",
+      "decision": "Aucun bouton ne doit laisser croire qu'un créneau est confirmé. Privilégier appeler ou préparer une demande de rendez-vous.",
+      "sources": [
+        "fresha",
+        "planity"
+      ]
+    },
+    {
+      "topic": "Statut Fresha",
+      "observation": "Vérification complémentaire par l'agent principal : la fiche précise explicitement que l’entreprise n’est actuellement ni affiliée ni en partenariat avec Fresha.",
+      "decision": "Présenter Fresha comme un annuaire tiers non affilié. Utiliser l'appel direct pour prendre rendez-vous.",
+      "sources": [
+        "fresha"
+      ]
+    },
+    {
+      "topic": "Avis",
+      "observation": "Des annuaires secondaires affichent des volumes différents et évolutifs d'avis Google. La fiche Google directe n'a pas été fournie ou vérifiée.",
+      "decision": "Ne publier aucune note, compteur ni témoignage. Ajouter la fiche Google officielle seulement une fois confirmée."
+    },
+    {
+      "topic": "Promesses de résultats",
+      "observation": "Le site ancien comporte des bénéfices corporels et anti-âge non étayés dans les sources consultées.",
+      "decision": "Privilégier la description du soin et de l'expérience ; ne promettre ni résultat, ni délai, ni bénéfice médical.",
+      "sources": [
+        "site"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "priority": "launch",
+      "field": "copyright",
+      "question": "Fournir logo original, photographies haute définition et confirmation des droits web.",
+      "decision": "Les fichiers publics et images de presse ne sont pas libres de droits. La capture Instagram est une référence, pas une photothèque exploitable sans limite."
+    },
+    {
+      "priority": "launch",
+      "field": "identity_and_legal",
+      "question": "Confirmer identité éditrice, SIRET, email public, directeur de publication, médiateur compétent, régime fiscal utile et conditions de prestation."
+    },
+    {
+      "priority": "launch",
+      "field": "current_offer",
+      "question": "Valider les quatre prestations historiques, leurs durées/prix et la place du soin L’Odaïtès, ainsi que tout nouveau soin."
+    },
+    {
+      "priority": "launch",
+      "field": "availability",
+      "question": "Confirmer plages d'ouverture, jours de fermeture, modalité de prise de rendez-vous et politique d'annulation."
+    },
+    {
+      "priority": "launch",
+      "field": "google_business",
+      "question": "Fournir ou confirmer le lien direct de la fiche Google et ses coordonnées."
+    },
+    {
+      "priority": "launch",
+      "field": "access",
+      "question": "Confirmer entrée exacte, étage, interphone, accessibilité PMR, parking conseillé, transports et moyens de paiement.",
+      "decision": "Seule l'adresse est vérifiée. Ne publier aucun temps de marche, accès sans marche ou parking privé sans preuve."
+    },
+    {
+      "priority": "editorial",
+      "field": "history_team",
+      "question": "Confirmer biographie, parcours et équipe ; ne pas inventer d'années d'expérience."
+    },
+    {
+      "priority": "editorial",
+      "field": "audience_area",
+      "question": "Confirmer clientèle principale et zone de provenance. Fontainebleau est vérifiée ; toute liste de communes desservies serait une proposition de ciblage, pas un fait."
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Juliette Greitzer",
+      "address": "36 rue de la Charité, 77210 Avon",
+      "url": "https://www.juliette-reflexologue.fr/",
+      "source": "juliette",
+      "servicesObserved": [
+        "Massage du visage Kobido",
+        "Réflexologie faciale Chan Beauté",
+        "Massage crânien"
+      ],
+      "conversionObserved": "Bouton de rendez-vous vers Resalib, téléphone, formulaire et carte cadeau.",
+      "contentObserved": "Pages dédiées aux pratiques, parcours, tarifs, informations pratiques.",
+      "lesson": "Rendre lisibles la différence entre les soins, le contact et le déroulement d'une visite.",
+      "scopeNote": "Concurrent local pertinent par offre ; aucun classement de popularité ou de qualité établi."
+    },
+    {
+      "name": "Bien-être du Loing",
+      "address": "19 ter route de Marlotte, 77690 Montigny-sur-Loing",
+      "url": "https://www.bienetreduloing.fr/",
+      "source": "loing",
+      "servicesObserved": [
+        "Soins Kobido",
+        "Soins miofasciaux",
+        "Soins énergétiques"
+      ],
+      "conversionObserved": "Réservation Fresha reliée depuis son propre site, tarifs et contact visibles.",
+      "contentObserved": "Navigation courte par type de soin et galerie.",
+      "lesson": "Associer chaque soin à une action de réservation cohérente et maintenir les tarifs validés près du soin.",
+      "scopeNote": "Concurrent local pertinent par offre ; ses prestations ne doivent pas être attribuées à Nadège."
+    },
+    {
+      "name": "La Sublime",
+      "address": "68 avenue du Général de Gaulle, 77630 Barbizon",
+      "url": "https://www.headspalasublime.com/",
+      "source": "sublime",
+      "servicesObserved": [
+        "Kobido",
+        "Soins visage",
+        "Head Spa japonais"
+      ],
+      "conversionObserved": "Tarifs et disponibilités, carte cadeau, page du lieu.",
+      "contentObserved": "Mise en avant de l'expérience du lieu et des photographies ; navigation vers différents rituels.",
+      "lesson": "Soigner l'ambiance visuelle tout en donnant rapidement les informations de soin et d'accès.",
+      "scopeNote": "Établissement de Barbizon ciblant également Fontainebleau dans ses pages."
+    }
+  ],
+  "recommendations": {
+    "positioning": "Proposition éditoriale : une adresse personnelle de massage du visage à Fontainebleau, avec le nom de Nadège, le geste et un contact direct au premier plan.",
+    "primaryAction": "Prendre rendez-vous par téléphone ; hypothèse basée sur les modalités publiques existantes, à valider par l'entreprise.",
+    "structuredData": "LocalBusiness ou BeautySalon avec nom, téléphone et adresse vérifiés ; pas de note, prix, horaires précis ou équipe non validés. Fournir la source École du Kobido dans la page de présentation.",
+    "localSEO": "Pages distinctes pour les quatre pratiques documentées, titres uniques incluant Fontainebleau quand utile, liens internes vers contact et accès ; pas de multiplication de pages de communes sans contenu spécifique.",
+    "demo": "Preview publique, noindex et popup explicative. Le noindex n'est ni un contrôle d'accès ni une garantie de confidentialité."
+  }
+}

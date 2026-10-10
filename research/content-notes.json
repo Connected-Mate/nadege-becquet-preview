@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-11",
+  "editorialStatus": "Textes originaux pour une démonstration ; validation finale par la professionnelle nécessaire avant lancement officiel.",
+  "verified": [
+    {
+      "fact": "Nadège BECQUET, facialiste ; téléphone 06 83 49 30 34 ; 160 rue Grande, 77300 Fontainebleau ; accueil sur rendez-vous ; quatre soins annoncés : massage facial détente, massage japonais Kobi-do, massage Gua Sha et stretching facial.",
+      "source": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+    },
+    {
+      "fact": "L’annuaire de l’École du Kobido liste Nadège BECQUET avec les mentions Authentique Kobido®, Expert et Ambassadrice Authentique Kobido®, au 160 rue Grande, 77300 Fontainebleau.",
+      "source": "https://www.ecoledukobido.com/praticiens-certifies"
+    },
+    {
+      "fact": "Retrait de la démo demandé dans un mois : date retenue 11 novembre 2026 à partir du 11 octobre 2026.",
+      "source": "Instruction utilisateur dans la conversation"
+    }
+  ],
+  "uncertainOrMissing": [
+    "Les horaires précis ne figurent pas sur la page du Pôle Santé Sport : seule la mention sur rendez-vous est reprise.",
+    "Les durées, tarifs, moyens de paiement, modalités d’annulation et possibilités de réservation en ligne ne sont pas confirmés.",
+    "Les protocoles détaillés, produits utilisés, effets attendus et éventuelles contre-indications doivent être précisés par Nadège ; aucun protocole ni bénéfice médical n’est inventé.",
+    "Le statut juridique, le SIREN/SIRET, l’adresse de contact électronique, le responsable de publication, la médiation de la consommation et les mentions légales complètes restent à confirmer.",
+    "L’entrée, l’étage, l’accessibilité, le stationnement et les arrêts de transport à proximité ne sont pas vérifiés.",
+    "La zone de clientèle au-delà de Fontainebleau et le profil de clientèle prioritaire ne sont pas précisés par l’utilisateur.",
+    "La capture Instagram mentionne une formation Méthode LB Facialiste et un soin L’Odaïtès ; ces éléments ne sont pas ajoutés à l’offre faute de vérification indépendante de leur actualité.",
+    "Aucun autre membre d’équipe n’est identifié dans les deux sources vérifiées ; la présentation est centrée sur Nadège.",
+    "Le droit de réutilisation des portraits, photographies et logos issus du site ou des réseaux sociaux n’est pas confirmé par la réponse utilisateur.",
+    "Aucune preuve d’autorisation de publication d’avis clients ou de photographies avant/après n’est fournie ; aucun avis, note agrégée ni résultat n’est créé."
+  ],
+  "differencesToResolve": [
+    "Le nom saisi par l’utilisateur est bequet ; les deux sources primaires donnent BECQUET. La graphie Nadège Becquet est retenue.",
+    "Le site du pôle affiche aussi le 143 rue Grande dans sa navigation générale ; la page facialiste indique explicitement le 160 rue Grande, confirmé par l’École du Kobido.",
+    "Le site du pôle intitule le soin MASSAGE JAPONAIS KOBI-DO ; l’annuaire de formation utilise Authentique Kobido®. Le site reprend le premier comme intitulé de prestation et le second uniquement pour le référencement de formation."
+  ],
+  "writingRules": [
+    "Pas de promesse de résultat, d’engagement thérapeutique ni de conseil médical.",
+    "Les articles sont des aides pratiques originales à la prise de rendez-vous, sans invention de protocole.",
+    "Les informations inconnues sont documentées ici et ne deviennent pas des promesses dans les contenus clients.",
+    "Les pages restent sans tarifs, durées ni horaires supposés.",
+    "Les intitulés de qualifications sont strictement limités aux mentions vérifiées dans l’annuaire de l’école."
+  ]
+}

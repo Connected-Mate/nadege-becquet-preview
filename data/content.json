@@ -1,0 +1,127 @@
+{
+  "business": {
+    "name": "Nadège Becquet",
+    "phone": "06 83 49 30 34",
+    "address": "160 rue Grande",
+    "city": "Fontainebleau",
+    "postalCode": "77300",
+    "appointmentNote": "Sur rendez-vous"
+  },
+  "home": {
+    "eyebrow": "Facialiste · Fontainebleau",
+    "title": "Le temps de vous\nretrouver.",
+    "description": "À Fontainebleau, Nadège Becquet vous reçoit sur rendez-vous pour un massage du visage. Découvrez ses soins et prenez le temps de choisir celui qui vous correspond."
+  },
+  "about": {
+    "intro": "Nadège Becquet est facialiste à Fontainebleau. Elle propose quatre approches du massage du visage, à découvrir selon vos envies : détente, massage japonais Kobi-do, Gua Sha et stretching facial.\n\nElle figure dans l’annuaire des praticiens certifiés de l’École du Kobido avec les mentions Authentique Kobido®, Expert et Ambassadrice Authentique Kobido®. Un repère concret pour découvrir sa pratique et engager un premier échange."
+  },
+  "services": [
+    {
+      "slug": "massage-facial-detente",
+      "title": "Massage facial détente",
+      "summary": "Faire une place à la détente, le temps d’un massage du visage.",
+      "body": "Vous avez envie de vous accorder une pause ? Le massage facial détente fait partie des soins proposés par Nadège. C’est une porte d’entrée pour découvrir le massage du visage ou simplement réserver un moment pour soi.\n\nLors de la prise de rendez-vous, indiquez ce que vous recherchez et posez vos questions sur le déroulement. Nadège pourra vous préciser les modalités du soin, sa durée et son tarif avant de confirmer votre venue."
+    },
+    {
+      "slug": "kobido",
+      "title": "Massage japonais Kobi-do",
+      "summary": "Découvrir le massage japonais du visage auprès d’une praticienne référencée par l’École du Kobido.",
+      "body": "Le massage japonais Kobi-do figure parmi les soins proposés au cabinet. Pour découvrir cette pratique, un premier échange permet de poser vos questions et de savoir à quoi vous attendre lors du rendez-vous.\n\nNadège est référencée dans l’annuaire de l’École du Kobido pour l’Authentique Kobido®, avec les mentions Expert et Ambassadrice. Demandez-lui les particularités de sa pratique ainsi que les modalités du soin avant de réserver."
+    },
+    {
+      "slug": "gua-sha",
+      "title": "Massage Gua Sha",
+      "summary": "Explorer une autre approche du massage du visage.",
+      "body": "Le Gua Sha fait partie de la carte de soins de Nadège. Si vous connaissez son nom sans l’avoir encore découvert en cabinet, la prise de contact est l’occasion de comprendre la place qu’il peut prendre dans votre rendez-vous.\n\nVous pouvez demander quels gestes et accessoires sont utilisés, comment la séance est organisée et si cette approche correspond à votre recherche. La durée et le tarif sont à convenir directement avec Nadège."
+    },
+    {
+      "slug": "stretching-facial",
+      "title": "Stretching facial",
+      "summary": "Prendre le temps de découvrir cette pratique du visage.",
+      "body": "Le stretching facial est l’une des quatre prestations présentées par Nadège. Avant de choisir, prenez le temps d’échanger sur vos attentes et de lui demander en quoi ce soin se distingue des autres massages proposés.\n\nVous hésitez entre plusieurs approches ? Il n’est pas nécessaire de connaître leur technique pour prendre contact. Expliquez simplement votre envie ; Nadège pourra vous présenter les possibilités et leurs modalités."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Comment prendre rendez-vous ?",
+      "answer": "Contactez Nadège au 06 83 49 30 34. Indiquez le soin qui vous intéresse et vos disponibilités pour convenir d’un rendez-vous."
+    },
+    {
+      "question": "Où se trouve le cabinet ?",
+      "answer": "Nadège reçoit au 160 rue Grande, 77300 Fontainebleau. Utilisez les liens d’itinéraire de la page Contact pour préparer votre trajet."
+    },
+    {
+      "question": "Quels sont les horaires ?",
+      "answer": "Les soins ont lieu sur rendez-vous. Appelez Nadège pour connaître les créneaux disponibles et confirmer l’heure de votre venue."
+    },
+    {
+      "question": "Quel soin choisir pour une première visite ?",
+      "answer": "Vous pouvez prendre contact sans avoir arrêté votre choix. Présentez votre envie et demandez à Nadège de vous expliquer les différences entre les soins."
+    },
+    {
+      "question": "Combien coûte un soin et combien de temps dure-t-il ?",
+      "answer": "Demandez le tarif et la durée du soin qui vous intéresse lors de la prise de contact, avant de confirmer votre rendez-vous."
+    },
+    {
+      "question": "Comment préparer ma venue ?",
+      "answer": "Confirmez le soin, l’heure et l’adresse avec Nadège. Profitez de cet échange pour demander les consignes de préparation éventuelles et signaler tout besoin particulier pour l’accès au cabinet."
+    }
+  ],
+  "posts": [
+    {
+      "slug": "premier-rendez-vous",
+      "title": "Un premier rendez-vous, tout simplement",
+      "excerpt": "Les questions utiles pour préparer votre première visite chez une facialiste.",
+      "body": "Un premier rendez-vous commence par quelques mots sur votre envie. Souhaitez-vous découvrir le massage du visage, vous accorder un moment de détente ou en savoir plus sur une pratique précise ? Vous n’avez pas besoin de connaître les termes techniques pour prendre contact.\n\nAvant de confirmer, demandez la durée, le tarif et le déroulement du soin. Vérifiez également l’heure, l’adresse et les éventuelles consignes de préparation. Si vous avez un besoin particulier pour l’accès, évoquez-le dès cet échange.\n\nGardez le numéro du cabinet et préparez votre itinéraire. Ces quelques repères vous permettent d’arriver en sachant où vous rendre et ce qui a été convenu. Pour une question personnelle sur le soin, privilégiez un échange direct avec Nadège."
+    },
+    {
+      "slug": "choisir-son-soin",
+      "title": "Trouver le soin qui vous correspond",
+      "excerpt": "Détente, Kobi-do, Gua Sha, stretching facial : par où commencer ?",
+      "body": "Les noms des soins ne disent pas toujours tout de l’expérience proposée. Commencez par votre envie, puis demandez à Nadège ce qui distingue les différentes approches dans sa pratique. Ce dialogue est plus utile qu’un choix fondé uniquement sur un intitulé.\n\nQuelques questions peuvent guider votre échange : comment se déroule le rendez-vous ? Quelle place occupe chaque technique ? Quelle durée faut-il prévoir ? Quel est le tarif ? Les réponses vous aideront à choisir en ayant les informations concrètes à disposition.\n\nVous pouvez aussi garder votre choix ouvert lors du premier contact. Les pages des soins donnent un premier aperçu ; l’échange avec Nadège permet de préciser votre demande avant de réserver."
+    },
+    {
+      "slug": "venir-a-fontainebleau",
+      "title": "Préparer votre venue à Fontainebleau",
+      "excerpt": "L’adresse et quelques réflexes pratiques pour organiser votre déplacement.",
+      "body": "Le rendez-vous avec Nadège a lieu au 160 rue Grande, à Fontainebleau. Enregistrez cette adresse complète dans votre application d’itinéraire et vérifiez le point d’arrivée avant votre départ.\n\nConsultez votre trajet au moment de partir : circulation, travaux et transports peuvent modifier le temps de déplacement. Les liens d’accès de la page Contact vous permettent d’ouvrir l’adresse dans votre application habituelle.\n\nPour une question sur l’entrée du bâtiment ou un besoin particulier d’accessibilité, contactez Nadège en amont. Confirmez votre horaire de rendez-vous directement avec elle ; une indication d’ouverture trouvée dans un annuaire ne remplace pas cette confirmation."
+    }
+  ],
+  "demo": {
+    "removalDate": "2026-11-11"
+  },
+  "sources": [
+    {
+      "title": "Présentation de Nadège Becquet — Pôle Santé Sport Fontainebleau",
+      "url": "https://pole-sante-sport-fontainebleau.fr/faciale.html"
+    },
+    {
+      "title": "Annuaire des praticiens certifiés — École du Kobido",
+      "url": "https://www.ecoledukobido.com/praticiens-certifies"
+    }
+  ],
+  "pages": [
+    {
+      "slug": "mentions-legales",
+      "title": "Mentions légales de la démo — Nadège Becquet",
+      "description": "Statut de la proposition publique, hébergement et informations juridiques à compléter avant le lancement officiel du site.",
+      "body": "Statut du site\n\nCette proposition publique présente un projet de refonte pour Nadège Becquet. Elle ne constitue pas le site officiel et ne permet ni achat ni réservation confirmée. Le lien téléphonique ouvre l’application d’appel de votre appareil.\n\nÉdition et publication\n\nCette démo est déployée depuis le compte GitHub Connected-Mate. L’identité juridique complète de son responsable de publication reste à renseigner. Nadège Becquet n’est pas présentée comme ayant approuvé cette version.\n\nAvant lancement officiel, l’éditeur devra compléter son identité et statut juridique, son immatriculation, ses coordonnées de contact, le responsable de publication et, selon l’activité, les informations de médiation et les conditions applicables.\n\nHébergement de la démo\n\nGitHub Pages, service de GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis. Contacter GitHub Support (https://support.github.com/).\n\nImages et création\n\nComposition, signature typographique et illustrations préparées pour cette proposition. La version publique utilise des illustrations originales ; les aperçus photographiques restent dans la maquette locale en attendant confirmation des droits. Les fichiers originaux et leurs autorisations de publication doivent être validés avant exploitation officielle. Aucun logo officiel n’a été fourni.\n\nDurée de la démo\n\nRetrait prévu le 11 novembre 2026. La consigne de non-indexation ne rend pas le site privé et n’empêche ni le partage, ni les captures, ni la conservation par des tiers.\n\nCette page est un état provisoire transparent, à compléter avant une mise en ligne officielle. Références : mentions obligatoires d’un site professionnel (https://entreprendre.service-public.gouv.fr/vosdroits/F31228)."
+    },
+    {
+      "slug": "confidentialite",
+      "title": "Confidentialité & données — Démo Nadège Becquet",
+      "description": "Comprendre les données techniques de la démo, les liens externes et le chargement facultatif de Google Maps.",
+      "body": "Pas de formulaire de collecte\n\nCette démo ne recueille pas de demande via formulaire, ne comporte aucun paiement et ne charge aucun outil d’analyse d’audience. Les échanges par téléphone ou Instagram relèvent des services concernés.\n\nUne préférence dans votre navigateur\n\nLe stockage de session conserve uniquement votre choix de fermer l’explication de la démo, pendant l’onglet en cours. Il ne contient ni identité ni historique de navigation et n’est pas envoyé au serveur.\n\nCarte et liens externes\n\nGoogle Maps est chargé uniquement si vous cliquez sur le bouton correspondant. Google reçoit alors les données techniques nécessaires, notamment votre adresse IP. Les itinéraires Google Maps, Waze et Apple Plans ouvrent les services respectifs, soumis à leurs propres règles de confidentialité.\n\nHébergement\n\nGitHub peut traiter des données techniques pour faire fonctionner et sécuriser son hébergement. Consultez la politique de confidentialité GitHub (https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).\n\nAvant la mise en ligne officielle\n\nL’identité du responsable de traitement, le contact pour l’exercice des droits et les règles de tout futur formulaire ou service de réservation devront être complétés et validés. Aucun back-office ni identifiant d’administration n’est exposé sur GitHub Pages."
+    },
+    {
+      "slug": "sources",
+      "title": "Sources & informations à confirmer — Démo Nadège Becquet",
+      "description": "Traçabilité des informations utilisées pour la démo : sources publiques, informations concordantes, incertitudes et validations avant lancement.",
+      "body": "Informations concordantes\n\nNadège Becquet, facialiste, 160 rue Grande, 77300 Fontainebleau. Téléphone : 06 83 49 30 34. Accueil sur rendez-vous.\n\nSite du Pôle Santé Sport Fontainebleau (https://pole-sante-sport-fontainebleau.fr/faciale.html) : coordonnées et quatre massages présentés.\n\nAnnuaire de l’École du Kobido (https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge) : certification Authentique Kobido® et adresse.\n\nCapture Instagram fournie : identité visuelle de référence, portrait, téléphone et adresse.\n\nÀ confirmer avant lancement\n\nHoraires détaillés, durées, tarifs et disponibilité actuelle des prestations.\n\nIdentité juridique de l’éditeur, SIRET, coordonnées de contact officielles, responsable de publication et médiateur de la consommation.\n\nDroits des photographies originales, logo officiel et validation des textes par Nadège.\n\nFiche Google officielle, transports, stationnement et accessibilité.\n\nDiplôme Méthode LB et soin L’Odaïtès mentionnés uniquement sur la capture : pas de page de prestation dédiée sans confirmation.\n\nLes annuaires ne font pas foi pour tout\n\nFresha (https://www.fresha.com/fr/lvp/nadege-becquet-facialiste-certifiee-authentique-kobido-r-rue-grande-bxNK4X) précise que l’établissement n’est pas affilié. Les horaires, catégories et prestations supplémentaires de cette fiche ne sont pas repris comme des faits établis. Ce lien n’est pas présenté comme une réservation en ligne.\n\nLe site du Pôle comporte aussi une mention du 143 rue Grande pour le centre. La section consacrée à Nadège donne bien le 160 rue Grande, adresse corroborée par l’École du Kobido.\n\nArticle de presse signalé\n\nArticle sur actu.fr (https://actu.fr/ile-de-france/fontainebleau_77186/a-fontainebleau-nadege-becquet-prend-soin-de-votre-visage_59750151.html) transmis comme référence ; contenu non accessible pendant cette vérification. Aucun propos ni résultat n’en est extrait.\n\nVérification documentaire : 11 octobre 2026. Aucun avis client, note, tarif ou résultat garanti n’a été créé."
+    }
+  ],
+  "media": {
+    "photosAuthorized": false,
+    "note": "Droits de republication demandés, confirmation en attente. Capture conservée uniquement dans .local/."
+  }
+}

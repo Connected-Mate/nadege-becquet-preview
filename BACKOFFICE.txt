@@ -1,0 +1,89 @@
+ADMINISTRATION LOCALE — NADÈGE BECQUET
+
+PRÉREQUIS
+Node.js 20 ou plus récent. Aucune dépendance serveur externe.
+Depuis le dossier du projet :
+  npm run build
+  npm run start
+Site local : http://127.0.0.1:4173/
+Administration : http://127.0.0.1:4173/admin/
+Mode d’emploi : http://127.0.0.1:4173/admin/aide.html
+
+ACCÈS
+Le premier démarrage génère un mot de passe aléatoire fort dans
+.local/admin-access.txt (permissions 0600). Le dossier .local est privé
+au compte système courant (0700), hors export et à exclure de Git.
+L’application ne transmet jamais ce fichier par HTTP.
+Copier ce secret dans un gestionnaire de mots de passe ; le fichier
+admin-access.txt peut ensuite être supprimé. Le mot de passe stocké pour
+l’authentification est une empreinte scrypt avec un sel aléatoire.
+Réinitialiser : arrêter le serveur, lancer
+  node server.mjs --reset-password
+puis relancer npm run start. Ne pas transmettre le dossier .local.
+
+FONCTIONNEMENT
+Le serveur écoute uniquement sur 127.0.0.1:4173. Les contrôles d’hôte et
+d’origine réduisent les attaques provenant d’autres sites. Sessions de
+8 h, cookie HttpOnly / SameSite=Strict, jeton CSRF sur mutations, limite
+de cinq échecs de connexion par période de quinze minutes. HTTP est
+réservé au loopback ; ce serveur n’est pas conçu pour être exposé sur
+Internet ou derrière un proxy public. Redémarrer invalide les sessions
+et remet à zéro les compteurs de tentative conservés en mémoire.
+
+Les champs connus du contenu sont validés : types, tailles, unicité et
+format des adresses de pages, dates réelles. Les clés complémentaires
+restent intactes. Aucun texte n’est exécuté comme HTML par l’admin.
+L’éditeur JSON permet de modifier l’intégralité du contenu ; il requiert
+de conserver le schéma. Aucun avis, titre professionnel, tarif ou
+engagement ne doit être ajouté sans vérification indépendante.
+La rubrique « Pages légales & sources » édite le tableau pages facultatif.
+Il peut contenir au maximum trois pages aux adresses uniques :
+mentions-legales, confidentialite et sources. Chaque page comprend
+slug, title, description et body ; le corps utilise du texte simple,
+avec des paragraphes séparés par une ligne vide et des URL en texte.
+
+ENREGISTREMENT ET HISTORIQUE
+Les modifications sont enregistrées dans data/content.json par
+remplacement atomique, après copie de la version précédente dans
+.local/history/. Un identifiant de révision évite les écrasements entre
+deux onglets. L’onglet Historique permet une restauration authentifiée ;
+la version remplacée est alors sauvegardée à son tour. Les événements
+sont consignés dans .local/audit.jsonl, sans mot de passe ni jeton.
+Ces copies sont locales, sans rétention automatique ni sauvegarde cloud.
+Dans Export & publication, « Valider cette version après relecture »
+enregistre la date et l’empreinte du contenu relu dans .local/approval.json
+et dans le journal. Une modification du contenu invalide cette validation
+pour la nouvelle version. Cette étape trace une relecture humaine ; elle
+ne certifie ni les faits ni les droits. La génération de preview reste
+possible avant validation, afin de permettre cette relecture. Le serveur
+ne bloque pas une commande Git exécutée directement dans le terminal.
+Une sauvegarde séparée du projet et de .local sur support sûr reste à
+organiser. L’export JSON télécharge la dernière version enregistrée.
+
+EXPORT ET PUBLICATION
+Après enregistrement, cliquer « Générer la preview » : le serveur lance
+uniquement Node avec scripts/build.mjs, sans commande shell arbitraire.
+Le site statique est reconstruit dans dist/, puis visible à l’adresse
+locale. La génération ne publie rien sur Internet.
+Après validation visuelle, depuis le terminal du dépôt configuré :
+  npm run build
+  git add data/content.json
+  git commit -m "Mise à jour des contenus"
+  git push
+Le workflow GitHub Pages doit réussir avant de considérer la nouvelle
+version publiée. L’administration, les secrets et les sauvegardes ne
+fonctionnent pas sur GitHub Pages et doivent rester absents de dist/.
+
+DÉMONSTRATION
+L’URL GitHub Pages est publique. noindex ne signifie pas privée.
+demo.removalDate est une date YYYY-MM-DD ou null tant que la date est
+inconnue. Sa saisie prépare le retrait ; ce serveur local ne programme
+aucune suppression distante et ne retire pas automatiquement noindex.
+Se référer au guide de livraison pour les étapes de retrait et de
+lancement officiel, et vérifier les données après toute restauration.
+
+VÉRIFICATIONS
+  node --test tests/admin.test.mjs
+Ces tests vérifient : authentification, cookie, origine, CSRF, hôte,
+validation, conflit de révision, copie, restauration, export, expiration,
+limitation des tentatives et confinement des fichiers servis.
