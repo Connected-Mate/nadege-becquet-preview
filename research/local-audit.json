@@ -106,7 +106,7 @@
       "title": "Autorisation de réutilisation des photographies pour cette refonte",
       "status": "confirmed",
       "checkedAt": "2026-10-11",
-      "note": "Droits confirmés explicitement par l’utilisateur ; portrait HD de la fiche École du Kobido et capture fournie utilisés dans la démo publique."
+      "note": "Droits confirmés explicitement par l’utilisateur. Le portrait souriant est issu du vrai fichier Instagram de la publication Cs87gKAM49w (512 × 640), conservé dans public/assets/photo-nadege-instagram-original.jpg. La version publique photo-nadege-instagram-amelioree.png (1122 × 1402) est agrandie par IA avec Imagegen, et non un original HD retrouvé. Le portrait noir et blanc a été retiré des fichiers publics."
     }
   ],
   "facts": [
@@ -256,7 +256,7 @@
       "sources": [
         "user-photo-rights"
       ],
-      "note": "Portrait noir et blanc HD et capture Instagram publiés ; les détails de la capture sont cadrés par CSS. La recherche de sources HD supplémentaires reste une amélioration de qualité, pas une nouvelle demande de droits pour les images déjà autorisées."
+      "note": "Portrait Instagram souriant au foulard rouge : fichier original 512 × 640 conservé, version agrandie par IA avec Imagegen 1122 × 1402 utilisée après comparaison visuelle. L’agrandissement estime les détails absents et ne constitue pas un original HD. Le portrait noir et blanc a été retiré des fichiers publics. Les autres détails de la capture sont cadrés par CSS. Provenance et traitement : research/assets.json et research/portrait-imagegen.txt. Les droits des images utilisées sont confirmés."
     }
   ],
   "contradictions": [
@@ -314,7 +314,7 @@
     {
       "priority": "improvement",
       "field": "additional_hd_assets",
-      "question": "Des originaux HD supplémentaires du portrait souriant, des gestes ou du cabinet peuvent améliorer la galerie. Un logo officiel peut également compléter la signature proposée.",
+      "question": "Le portrait souriant est disponible en original Instagram de 512 × 640 et en version agrandie par IA de 1122 × 1402 ; aucune source HD originale supérieure n’a été confirmée. Des originaux HD des gestes ou du cabinet peuvent améliorer la galerie. Un logo officiel peut également compléter la signature proposée.",
       "decision": "Les droits des images actuellement utilisées sont confirmés. Ne pas présenter une nouvelle autorisation comme nécessaire pour continuer leur utilisation dans ce projet."
     },
     {

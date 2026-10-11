@@ -13,7 +13,7 @@ URL dangereuses, dates impossibles et soins inconnus avant enregistrement.
 Échappement HTML, JSON-LD, titres/coordonnées modifiés et ajout d’article vérifiés.
 Commande : npm test
 
-2. Export : 21 pages HTML, 657 références, 2 141 contrôles réussis.
+2. Export : 21 pages HTML, 657 références, 2 143 contrôles réussis.
 Liens locaux, ressources, ancres, noindex, titres et descriptions uniques,
 URL canoniques et Open Graph, portrait de partage et données structurées exactes :
 établissement, site, pages, prestations, articles, auteur éditorial, fil d’Ariane
@@ -52,8 +52,8 @@ Le résultat de cette vérification est joint dans artifacts/public-check.json.
 
 6. Revue visuelle.
 Accueil, galerie et article relus visuellement. Typographies Cormorant Garamond
-et Manrope servies localement, avec licences OFL incluses. Portrait original HD
-et détails photographiques de la capture fournie. Aucun outil d’analyse chargé.
+et Manrope servies localement, avec licences OFL incluses. La version du portrait
+a depuis changé ; voir l’addendum photo ci-dessous. Aucun outil d’analyse chargé.
 
 LIMITES
 Les tailles d’écran sont émulées ; aucun appareil physique ni audit humain complet
@@ -61,7 +61,24 @@ avec lecteur d’écran n’a été testé. Axe ne constitue pas une certificati
 Le QR contient l’URL Google Maps de l’adresse corroborée par les sources ; sa lecture
 sur téléphone physique n’a pas été testée. Les applications tierces déterminent
 les trajets et le comportement à l’ouverture. Les accès du bâtiment restent à confirmer.
-Les photographies de la capture sont de faible définition ; le portrait principal
-est un original de 1080×1080. Les droits d’utilisation ont été confirmés par l’utilisateur.
+Les photographies de la capture sont de faible définition. Le portrait principal
+provient d’un fichier Instagram de 512 × 640 pixels, agrandi par IA en
+1122 × 1402 pixels ; ce n’est pas un original HD. L’original est conservé.
+Les droits d’utilisation ont été confirmés par l’utilisateur.
 La démo est publique, conserve noindex et sa popup ; retrait prévu le 11 novembre 2026.
 La réussite du retrait futur devra être vérifiée à l’échéance.
+
+ADDENDUM PHOTO — 11 OCTOBRE 2026
+Le portrait noir et blanc est retiré des fichiers publics. Le portrait souriant
+au foulard rouge provient du vrai fichier Instagram (512 × 640), conservé sous
+public/assets/photo-nadege-instagram-original.jpg. La version utilisée est
+photo-nadege-instagram-amelioree.png (1122 × 1402), agrandie par IA avec
+Imagegen et comparée visuellement à l’original. Elle estime les détails absents,
+sans constituer un original HD retrouvé. Après cette modification : 20/20 tests Node et 2 143 contrôles d’export
+réussis sur 21 fichiers HTML et 657 références. Accueil, page Nadège et galerie
+vérifiés dans le navigateur aux largeurs 320, 390 et 768 pixels, puis accueil
+relu sur ordinateur : bon portrait, dimensions 1122 × 1402, texte alternatif
+cohérent et aucun débordement horizontal. Le fichier noir et blanc n’est plus
+servi localement. Les parcours complets des sections 3 et 4 sont antérieurs
+à ce changement de photo. Le contrôle ciblé après publication est consigné
+séparément dans artifacts/portrait-public-check.json.

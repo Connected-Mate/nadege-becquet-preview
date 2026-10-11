@@ -9,7 +9,7 @@
   "implemented": [
     "Titres, descriptions et URL canoniques propres à chaque route ; contrôle automatisé de leur unicité et cohérence.",
     "Open Graph avec URL et type cohérents ; aucune photographie, note, durée, offre, prix, coordonnée géographique ou plage horaire inventés dans le balisage.",
-    "Portrait de partage officiel configuré par media.shareImage uniquement lorsque photosAuthorized vaut true : URL locale assets/ contrôlée, dimensions et texte alternatif. L’image est rattachée à l’établissement, sans être attribuée comme illustration particulière d’un article.",
+    "Portrait de partage configuré par media.shareImage uniquement lorsque photosAuthorized vaut true : URL locale assets/ contrôlée, dimensions réelles et texte alternatif. Le fichier Instagram original du portrait souriant (512 × 640) est conservé ; l’image de partage photo-nadege-instagram-amelioree.png (1122 × 1402) est un agrandissement par IA avec Imagegen, pas un original HD retrouvé. Le portrait noir et blanc a été retiré des fichiers publics. L’image est rattachée à l’établissement, sans être attribuée comme illustration particulière d’un article.",
     "Graph JSON-LD lié par identifiants stables : BeautySalon, WebSite, WebPage, BreadcrumbList, Service sur chaque soin et BlogPosting sur chaque article.",
     "Nom, adresse et téléphone structurés dérivés du même fichier de contenu que les informations publiques du site.",
     "Auteur du blog : Rédaction de la démonstration, en tant qu’Organization éditoriale. Nadège n’est pas automatiquement présentée comme autrice ou validatrice.",

@@ -33,14 +33,19 @@ confirmé en ligne et Fresha n’est pas présenté comme un agenda.
 PHOTOGRAPHIES
 L’utilisateur a confirmé les droits d’utilisation des photographies pour
 ce projet le 11 octobre 2026. Les images sont incluses dans la démo publique.
-Le portrait noir et blanc 1080 × 1080 provient de la fiche nominative de
-l’École du Kobido. La capture Instagram fournie est conservée intacte ;
-ses détails sont cadrés par CSS. Les références figurent dans research/assets.json.
-Des originaux HD supplémentaires du portrait souriant, des gestes ou du
-cabinet pourraient améliorer la galerie. Leur absence ne remet pas en
-attente l’autorisation déjà donnée pour les images utilisées.
-media.photosAuthorized vaut true. media.shareImage désigne le portrait HD,
-ses dimensions et son texte alternatif pour le partage Open Graph.
+Le portrait souriant au foulard rouge provient du vrai fichier Instagram
+de la publication Cs87gKAM49w, récupéré en 512 × 640 pixels. Cet original est
+conservé dans public/assets/photo-nadege-instagram-original.jpg. La version
+utilisée, photo-nadege-instagram-amelioree.png (1122 × 1402 pixels), est un
+agrandissement par IA avec Imagegen, comparé visuellement à la source.
+Elle estime des détails absents et ne constitue pas un original HD retrouvé.
+Le portrait noir et blanc a été retiré des fichiers publics. La capture
+Instagram fournie reste conservée intacte pour les autres détails cadrés
+par CSS. Provenance : research/assets.json et research/portrait-imagegen.txt.
+Des originaux HD des gestes ou du cabinet pourraient améliorer la galerie ;
+les droits des images utilisées sont déjà confirmés.
+media.photosAuthorized vaut true. media.shareImage désigne la version
+agrandie, ses dimensions réelles et son texte alternatif pour Open Graph.
 
 RÉFÉRENCEMENT ET JOURNAL
 Chaque page dispose d’un titre et d’une description uniques, d’une URL

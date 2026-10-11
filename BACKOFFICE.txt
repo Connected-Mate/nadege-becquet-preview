@@ -75,6 +75,12 @@ malformés sont refusés avec un message explicatif avant l’enregistrement.
 
 PHOTOS ET PARTAGE
 Les droits des photographies utilisées ont été confirmés par l’utilisateur.
+Le portrait souriant vient du fichier Instagram original de 512 × 640 pixels,
+conservé dans public/assets/photo-nadege-instagram-original.jpg. La version
+photo-nadege-instagram-amelioree.png de 1122 × 1402 pixels est agrandie
+par IA avec Imagegen : ce n’est pas un original HD retrouvé. Le portrait
+noir et blanc a été retiré des fichiers publics. La provenance et le traitement
+sont documentés dans research/assets.json et research/portrait-imagegen.txt.
 media.photosAuthorized vaut true. L’image de partage est définie dans
 media.shareImage par path, width, height et alt. Le chemin doit viser un
 fichier JPG, PNG ou WebP sous assets/, sans traversée de répertoire ; les

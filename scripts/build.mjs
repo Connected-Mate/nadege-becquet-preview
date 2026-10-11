@@ -19,7 +19,8 @@ const date = c.demo.removalDate;
 const dateLabel = date ? new Intl.DateTimeFormat('fr-FR', {day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Paris'}).format(new Date(`${date}T12:00:00Z`)) : 'date à confirmer';
 const buildTime = process.env.BUILD_TIME ? Date.parse(process.env.BUILD_TIME) : Date.now();
 const expired = Boolean(date && new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(buildTime)) >= date);
-const photosAllowed = c.media?.photosAuthorized === true || process.env.LOCAL_REFERENCE_PHOTOS === '1';
+const photosAllowed = c.media?.photosAuthorized === true;
+const portraitImage = photosAllowed ? c.media?.shareImage : undefined;
 const sourceSite = 'https://pole-sante-sport-fontainebleau.fr/faciale.html';
 const sourceSchool = 'https://www.ecoledukobido.com/praticiens-certifies/becquet-nad%C3%A8ge';
 const baseFor = slug => slug === '404.html' ? '' : '../'.repeat(slug.split('/').filter(Boolean).length);
@@ -58,9 +59,10 @@ function legalBody(value) {
 const titleLines = value => value.split('\n').map((line, i) => i ? `<em>${esc(line)}</em>` : esc(line)).join('<br>');
 const appointment = (label = 'Appeler pour réserver', className = '') => `<a class="button ${className}" href="tel:${phone}">${esc(label)}</a>`;
 function photo(base, kind = 'portrait', priority = false) {
-  if (!photosAllowed) return `<div class="photo-placeholder" role="img" aria-label="Emplacement du portrait"><span>${esc(c.business.name)}</span></div>`;
-  if (kind === 'portrait') return `<div class="portrait photo-hd"><img src="${base}assets/photo-nadege-portrait-noir-blanc.jpg" alt="Portrait de ${esc(c.business.name)}, facialiste" width="1080" height="1080" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}></div>`;
-  const alt = {smile:`${c.business.name}, souriante avec un foulard rouge`,gua:'Outil de Gua Sha présenté par Nadège',flowers:'Fleurs et plaque de Nadège Becquet'}[kind];
+  const isPortrait = kind === 'portrait' || kind === 'smile';
+  if (!photosAllowed || (isPortrait && !portraitImage)) return `<div class="portrait photo-placeholder${kind === 'smile' ? ' photo-smile' : ''}" role="img" aria-label="Emplacement du portrait"><span>${esc(c.business.name)}</span></div>`;
+  if (isPortrait) return `<div class="portrait photo-hd${kind === 'smile' ? ' photo-smile' : ''}"><img src="${base}${esc(portraitImage.path)}" alt="${esc(portraitImage.alt)}" width="${esc(portraitImage.width)}" height="${esc(portraitImage.height)}" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}></div>`;
+  const alt = {gua:'Outil de Gua Sha présenté par Nadège',flowers:'Fleurs et plaque de Nadège Becquet'}[kind];
   return `<div class="reference-crop crop-${kind}"><img src="${base}assets/reference-nadege.jpg" alt="${esc(alt)}" width="589" height="1280" loading="lazy"></div>`;
 }
 function pageHeading(eyebrow, title, intro = '') {
@@ -162,9 +164,8 @@ if (!expired) {
   await fs.cp('public',out,{recursive:true});
   if (!photosAllowed) {
     await fs.rm(path.join(out,'assets/reference-nadege.jpg'),{force:true});
-    await fs.rm(path.join(out,'assets/photo-nadege-portrait-noir-blanc.jpg'),{force:true});
-  } else if (!c.media?.photosAuthorized) {
-    await fs.copyFile(path.join(root,'.local/reference-nadege.jpg'),path.join(out,'assets/reference-nadege.jpg'));
+    const imagePath = c.media?.shareImage?.path;
+    if (typeof imagePath === 'string' && /^assets\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9][A-Za-z0-9._-]*\.(?:jpe?g|png|webp)$/i.test(imagePath) && !imagePath.includes('..')) await fs.rm(path.join(out,imagePath),{force:true});
   }
   await fs.writeFile(path.join(out,'assets/itineraire.svg'),await QRCode.toString(maps.google,{type:'svg',margin:2,color:{dark:'#502e36',light:'#f8f6f1'}}));
 }

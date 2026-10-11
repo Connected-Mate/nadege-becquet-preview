@@ -1,0 +1,23 @@
+PORTRAIT INSTAGRAM — 11 OCTOBRE 2026
+
+Demande : remplacer le portrait noir et blanc par le sourire au foulard rouge,
+récupérer la meilleure image Instagram accessible et améliorer sa définition.
+
+Source : https://www.instagram.com/nadegebecquet.facialiste/p/Cs87gKAM49w/
+L’image a été téléchargée directement depuis le profil Instagram public avec
+le navigateur. Aucune capture d’écran n’a servi d’entrée à l’agrandissement.
+
+Original : public/assets/photo-nadege-instagram-original.jpg, 512×640.
+Version utilisée : public/assets/photo-nadege-instagram-amelioree.png, 1122×1402.
+Mode : outil intégré Imagegen, édition de l’image originale.
+
+La demande visait une conservation stricte de l’identité et de l’expression.
+Une amélioration générative estime les détails absents ; elle ne restaure pas
+un original HD perdu. Original et version améliorée ont été comparés visuellement.
+
+PROMPT TRANSMIS
+
+Use case: identity-preserve. Asset type: professional business website portrait. Edit ONLY the supplied actual photograph, a 512 by 640 pixel Instagram original. This is a conservative photographic super-resolution/restoration task, NOT generating another portrait or improving her looks. Deliver an enlarged clean photograph at 1024 by 1280 pixels (same 4:5 framing). Preserve exactly the same woman, facial proportions, facial asymmetry, laughing squint, warm open smile, every tooth's alignment and irregularity, natural skin texture and wrinkles, dark short hair, round tortoiseshell/red glasses, turquoise small ear stud, red scarf with white polka dots, black coat and existing white AF embroidered circular emblem. Preserve pose, head tilt, crop, original colors, lighting, and blurred green botanical wallpaper. Only reduce JPEG/compression softness and recover restrained natural edge detail. Keep realistic pores and fine lines; no beauty retouching, no skin smoothing, no face redesign, no younger age, no changed teeth, no new makeup, no sharpened background, no invented accessories or text, no Instagram interface. Aim for the same photograph at twice the linear resolution, never a newly imagined scene.
+
+Dimension demandée : 1024×1280. Dimension effectivement retournée et conservée :
+1122×1402 ; les attributs HTML et Open Graph utilisent la dimension réelle.

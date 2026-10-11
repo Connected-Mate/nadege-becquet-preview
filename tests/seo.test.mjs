@@ -71,12 +71,12 @@ test('metadata and JSON-LD cannot break out into executable HTML and routes stay
 });
 
 test('authorised sharing portrait has absolute Open Graph dimensions and a business image entity', () => {
-  const data = content(); data.media = { photosAuthorized: true, shareImage: { path: 'assets/photo-nadege-portrait-noir-blanc.jpg', width: 1080, height: 1080, alt: 'Portrait de Nadège Becquet, facialiste' } };
+  const data = content(); data.media = { photosAuthorized: true, shareImage: { path: 'assets/portrait.jpg', width: 1080, height: 1080, alt: 'Portrait de Nadège Becquet, facialiste' } };
   const result = make({ content: data, slug: 'journal/premiere-visite/' });
-  assert.match(result.head, /property="og:image" content="https:\/\/example.com\/demo-facialiste\/assets\/photo-nadege-portrait-noir-blanc.jpg"/);
+  assert.match(result.head, /property="og:image" content="https:\/\/example.com\/demo-facialiste\/assets\/portrait.jpg"/);
   assert.match(result.head, /property="og:image:width" content="1080"/); assert.match(result.head, /property="og:image:height" content="1080"/);
   assert.match(result.head, /property="og:image:alt" content="Portrait de Nadège Becquet, facialiste"/);
-  const image = find(result, 'ImageObject'); assert.equal(image.contentUrl, `${SITE}assets/photo-nadege-portrait-noir-blanc.jpg`);
+  const image = find(result, 'ImageObject'); assert.equal(image.contentUrl, `${SITE}assets/portrait.jpg`);
   assert.equal(find(result, 'BeautySalon').image['@id'], image['@id']);
   assert.equal(find(result, 'BlogPosting').image, undefined, 'The cabinet portrait is not an article-specific illustration.');
   data.media.photosAuthorized = false; assert.doesNotMatch(make({ content: data }).head, /og:image/); assert.equal(find(make({ content: data }), 'ImageObject'), undefined);
